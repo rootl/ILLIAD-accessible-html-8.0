@@ -1,0 +1,46 @@
+﻿<html>
+<#INCLUDE filename="includes/drupalheader_responsive.inc">
+<head>
+<title>Information Delivery Services | </title>
+<link rel="stylesheet" type="text/css" href="styles/GIST4Web.css">		
+</head>
+<body>
+
+<!-- <h1>Information Delivery Services (IDS)</h1> -->
+<h1>Active Requests</h1>
+<!-- <div style="margin-bottom:30px;"> -->
+<div>
+<!--div>
+	<h3>You are signed in as <#PARAM name="Username"></h3> 
+	<ul>
+		<li><a href="<#ACTION action="10" form="81">">Account Settings</a></li>
+		<li><a href="#acct_notifications">Recent Account Notifications</a></li>
+		<li><a href="<#ACTION action="99">">Logout</a></li>
+	</ul>
+</div-->
+<#INCLUDE filename="includes/include_menu_you_are_logged_in_as.html">
+</div>
+<!-- <h3><#STATUS></h3> -->
+<div>			
+				<#TABLE name="ViewOutstandingRequests" noDataAction="ShowMessageRow" noDataMessage="No Requests" 
+				 column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
+</div>
+<div>			
+<h2>What does the status mean?</h2>
+<ul>
+	<li><b>Awaiting Conditional Processing</b> - A potential lender has placed conditions on your requested item and is awaiting a response from IDS staff. You may be contacted for additional information.</li>
+	<li><b>Awaiting/In DD Stacks Searching</b> - IDS staff is preparing to retrieve your requested item from Milne's collection.</li>
+	<li><b>Awaiting Milne/IDS Local Processing</b> - The IDS system has determined that the item you requested is available in Milne's print or electronic collections. IDS will verify the item's availability and contact you.</li>
+	<li><b>Awaiting Purchase/Student Request Processing</b> - The item you recommended for purchase has been received but not yet processed by Acquisitions staff.</li>
+	<li><b>Awaiting Request Processing</b> - Your request has been submitted but not yet processed by IDS staff.</li>
+	<li><b>Awaiting Unfilled Processing</b> - Your request was denied by several potential lenders and will be reprocessed by IDS staff.</li>
+	<li><b>Awaiting Web Full Text Processing</b> - The IDS system has determined that your requested item is available for free on the Web. Pending verification from IDS staff, this item will be delivered to you electronically.</li>
+	<li><b>Needs/Awaiting Faculty Rep Review</b> - Due to procedures in your department, your purchase recommendation is awaiting approval by your library representative.</li>
+	<li><b>Purchase Request Exceeds CCD Limit</b> - The IDS system has determined that your purchase recommendation is for an item with many regional holdings. Pending review by Acquisitions staff, this request may be routed to IDS to be borrowed.</li>
+	<li><b>Request Sent</b> - Your request has been processed by IDS staff and is being reviewed by potential lenders.</li>
+</ul>
+</div>
+<#INCLUDE filename="includes/drupalfooter_responsive.inc">
+
+</body>
+</html>
