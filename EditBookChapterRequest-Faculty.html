@@ -1,0 +1,246 @@
+﻿<html>
+<#INCLUDE filename="includes/drupalheader_responsive.inc">
+<head>
+<title>Information Delivery Services | </title>
+<link rel="stylesheet" type="text/css" href="styles/GIST4Web.css">		
+</head>
+<body>
+
+<!-- <h1>Information Delivery Services (IDS)</h1> -->
+<h1>Request a Copy of a Book Chapter</h1>
+
+<!--div>
+	<h3>You are signed in as <#PARAM name="Username"></h3> 
+	<ul>
+		<li><a href="<#ACTION action="10" form="81">">Account Settings</a></li>
+		<li><a href="#acct_notifications">Recent Account Notifications</a></li>
+		<li><a href="<#ACTION action="99">">Logout</a></li>
+	</ul>
+</div-->
+<#INCLUDE filename="includes/include_menu_you_are_logged_in_as.html">
+
+<form action="illiad.dll" method="post" id="GISTform" name="EditBookChapterRequest" >
+                <input type="hidden" name="ILLiadForm" value="EditBookChapterRequest" />
+                <input type="hidden" name="Username" value="<#PARAM name="Username">" />
+                <input type="hidden" name="SessionID" value="<#PARAM name="SessionID">" />
+				<input name="TransactionNumber" type="hidden" id="TransactionNumber" value="<#PARAM name="TransactionNumber">">
+				<input name="RequestType" type="hidden" id="RequestType" value="Article" />
+				<input name="CallNumber" type="hidden" id="CallNumber" value="<#PARAM name="CallNumber">">
+				<input name="GISTWeb.Group3Libraries" type="hidden" id="GISTWeb.Group3Libraries" value="<#DatabaseTableField Table="GISTWeb" Field="Group3Libraries">">
+				<input name="GISTWeb.Group2Libraries" type="hidden" id="GISTWeb.Group2Libraries" value="<#DatabaseTableField Table="GISTWeb" Field="Group2Libraries">">
+				<input name="GISTWeb.FullTextOnline" id="GISTWeb.FullTextOnline" type="hidden" value="<#DatabaseTableField Table="GISTWeb" Field="FullTextOnline">">
+				<input id="GISTWeb.FullTextURL" name="GISTWeb.FullTextURL" type="hidden" value="<#DatabaseTableField Table="GISTWeb" Field="FullTextURL">">
+				<input name="GISTWeb.LocallyHeld" id="GISTWeb.LocallyHeld" type="hidden" value="no">
+				<input id="ESPNumber" name="ESPNumber" type="hidden" size="20" class="f-name" tabindex="8" value="<#PARAM name="ESPNumber">">
+				<input id="GISTWeb.Delivery" name="GISTWeb.Delivery" type="hidden" size="1" class="f-name" tabindex="15" value="Hold at Service Desk">
+				<!--Old locally held/full text--><input name="WantedBy" type="hidden" id="WantedBy" value="" />
+				<!--Old full text URL--><input id="CitedIn" name="CitedIn" type="hidden" value="<#PARAM name="CitedIn">">
+				<!--<input name="DocumentType" type="hidden" id="DocumentType" value="Testing">-->
+ 
+<!--                 	<div><h3><#STATUS></h3></div> -->
+					
+					<!-- Begin redesigned GIST form -->
+					
+					<table id="gist_table">
+						<tr>
+							<td id="info_column">
+								<div id="item_info">
+									<div class="gist_form_heading"><h2>Book Information</h2></div>
+									<div class="gist_form_contents">
+										<div class="field_name">* Title:</div><div class="field"><!--<#ERROR name="ERRORPhotoJournalTitle">--><input id="PhotoJournalTitle" name="PhotoJournalTitle" type="text" size="55" class="f-name" tabindex="1" value="<#PARAM name="PhotoJournalTitle">"></div>
+ 										<div class="field_name">Author:</div><div class="field"><!--<#ERROR name="ERRORPhotoItemAuthor">--><input id="PhotoItemAuthor" name="PhotoItemAuthor" type="text" size="55" class="f-name" tabindex="2" value="<#PARAM name="PhotoItemAuthor">"></div>
+										<div class="field_name">Publisher:</div><div class="field"><!--<#ERROR name="ERRORPhotoItemPublisher">--><input id="PhotoItemPublisher" name="PhotoItemPublisher" type="text" size="55" class="f-name" tabindex="3" value="<#PARAM name="PhotoItemPublisher">"></div>
+										<div class="field_name">Pub. Date:</div><div class="field"><!--<#ERROR name="ERRORPhotoJournalYear">--><input id="PhotoJournalYear" name="PhotoJournalYear" type="text" size="55" class="f-name" tabindex="4" value="<#PARAM name="PhotoJournalYear">"></div>
+										<div class="field_name">Edition:</div><div class="field"><!--<#ERROR name="ERRORPhotoItemEdition">--><input id="PhotoItemEdition" name="PhotoItemEdition" type="text" size="55" class="f-name" tabindex="5" value="<#PARAM name="PhotoItemEdition">"></div>
+										<div class="field_name">* Format:</div>
+										<div class="field">
+											<!--<#ERROR name="ERRORDocumentType">--><select name="DocumentType" id="DocumentType" tabindex="6">
+												<option selected="selected"><#PARAM name="DocumentType"></option>
+												<option value="Book">Book</option>
+												<!--<option value="Compact Disk">Compact Disk</option>
+												<option value="DVD">DVD</option>-->
+												<option value="Gov Doc">Gov Doc</option>
+												<option value="Microform">Microform</option>
+												<!--<option value="VHS">VHS</option>-->
+												<option value="Other">Other</option>
+											</select>
+										</div>
+										<div class="field_name">ISBN:</div> <div class="field"><!--<#ERROR name="ERRORISSN">--><input id="ISSN" name="ISSN" type="text" size="20" class="f-name" tabindex="7" value="<#PARAM name="ISSN">"></div>
+									</div>
+									<div class="widget_title"><h3>Chapter Information</h3></div>
+									<div class="gist_form_contents">
+										<div class="field_name">* Title:</div><div class="field"><!--<#ERROR name="ERRORPhotoArticleTitle">--><input id="PhotoArticleTitle" name="PhotoArticleTitle" type="text" size="55" class="f-name" tabindex="8" value="<#PARAM name="PhotoArticleTitle">"></div>
+										<div class="field_name">Author:</div><div class="field"><!--<#ERROR name="ERRORPhotoArticleAuthor">--><input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="55" class="f-name" tabindex="9" value="<#PARAM name="PhotoArticleAuthor">"></div>
+										<div class="field_name">Pages:</div><div class="field"><!--<#ERROR name="ERRORPhotoJournalInclusivePages">--><input id="PhotoJournalInclusivePages" name="PhotoJournalInclusivePages" type="text" size="55" class="f-name" tabindex="10" value="<#PARAM name="PhotoJournalInclusivePages">"></div>
+									</div>
+								</div>
+								
+								<div id="amazon_info">
+									<div class="gist_form_contents">
+										<div id="LoadingRow" align="center"><div><div id="load_head" class="widget_title"><h3>Loading Amazon.com Description...</h3></div> <div class="progressBar"></div></div></div>
+											<div id="AmazonRow">											
+												<div id="Amazon">
+													<span id="AmazonData" style="display:none">
+													<div class="widget_title"><h3>Amazon.com Description</h3></div> <img id="AmazonImage" src="" alt="Cover Image" align="right" />
+												</div>
+												<div id="review_grabber"><b>Average Customer Review:</b> <img id="reviewimg" name="reviewimg" src="blank.gif" alt="Amazon Star Review" /></div>
+												<div id="Pricing"><a href="" id="amazondetail" name="amazondetail" target="_blank">Go to Amazon</a></div>
+												<div id="AmazonPrice"></div>
+												<div id="VendorPrice"></div>
+												<div id="AmazonReview"></div>
+												</span>
+												<span id="AmazonNotAvail" style="display:none" ><div class="form_head">Amazon.com Details are not available...</div></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</td>
+							
+							<td id="getit_column">
+								<div class="gist_form_heading"><h2>Get It</h2></div>
+								<div class="gist_form_contents">
+									<!--<div class="widget_box" id="FindItRow">
+										<div class="widget_title"><h3>Find My Item</h3></div>
+										<div>Use this feature to determine the fastest way to get your item. Enter a book's Title and Author, or just an ISBN, and click the button below to start your search.</div>
+										<input type="button" id="autoISBN" name="autoISBN" class="f-submit" value="Search by Title & Author OR by ISBN" onclick="searchGIST(this.form,3)" />
+									</div>-->
+									
+									<div class="widget_box" id="GoogleRow">
+										<div id="Google" >
+											<div id="googlediv">
+												<div class="widget_title"><h3>From Google Books</h3></div>
+												<div class="google_left" id="googleContents"></div>
+												<div class="google_right" id="googlePreview"></div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="widget_box" id="freedivrow">
+										<div id="Free Options">
+											<div id="freediv">
+												<div class="widget_title"><h3>Free Online</h3></div>
+												<div id="free_info"></div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="widget_box" id="WorldCatRow" align="center">
+										<div id="WorldCat">
+											<div class="widget_title"><h3>From Milne Library</h3></div>
+											<div id="holdings_summary"></div>
+										</div>
+									</div>
+									
+									<div class="widget_box" id="Pricebox">
+										<div class="widget_title"><h3>From Book Sellers</h3></div>
+									    <div id="googlePricebox"></div>
+									</div>
+									
+									<!--Load the calendar date picker-->
+									<script type="text/javascript" language="javascript" src="js/datepicker.js"></script>
+									
+									<div class="widget_box" id="ill_request_row">
+										<div class="widget_title"><h3>From IDS</h3></div>
+										<div class="widget_field_name">* By when do you need this?</div>
+							<div class="widget_field"><!--<#ERROR name="ERRORNotWantedAfter">--><input style="width: 200px !important;" readonly="readonly" id="NotWantedAfter" name="NotWantedAfter" type="text" size="10" class="f-name" tabindex="9" value="<#PARAM name="NotWantedAfter">"> <image style="cursor:pointer;" src="images/calendar-20px.png" alt="Select Date" onclick="displayDatePicker('NotWantedAfter', this);" /></div>
+												<!--Purchase or Borrow option is commented out; budget constraints as of 02/14/2018 -->
+							<!--div class="widget_field_name">Should Milne purchase or borrow this?</div-->
+							<!--div class="widget_field" -->
+								<!--<#ERROR name="ERRORGISTWeb.PurchaseRecommendation">--><!--select id="GISTWeb.PurchaseRecommendation" name="GISTWeb.PurchaseRecommendation" size="1" class="f-name" tabindex="13">
+									<option selected><#DatabaseTableField Table="GISTWeb" Field="PurchaseRecommendation"></option>
+									<option value="no">Borrow</option>
+									<option value="yes">Purchase</option>
+									<option value="no">Not sure</option>
+								</select>
+							</div-->
+						
+							<div class="widget_field_name">How would you like this delivered?</div>
+							<div class="field">
+								<!--<#ERROR name="ERRORGISTWeb.Delivery">--><select id="GISTWeb.Delivery" name="GISTWeb.Delivery" size="1" class="f-name" tabindex="15">
+									<option selected><#DatabaseTableField Table="GISTWeb" Field="Delivery"></option>
+									<option>Hold at Service Desk</option>
+									<option>Shelve in the Milne collection</option>
+									<option>Place on course reserve (specify class in notes)</option>
+									<option>Other (please specify in notes)</option>
+								</select>
+							</div>	
+						
+							<div style="font-size: 0.9em; font-weight:bold; margin-top:10px; margin-bottom:10px;">Will you accept...</div>
+							<div class="widget_list_item">Non-English versions?</div>
+							<div class="field">
+								<!--<#ERROR name="ERRORAcceptNonEnglish">--><select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" tabindex="10">
+									<option selected><#PARAM name="AcceptNonEnglish"></option>
+									<option>No</option>
+									<option>Yes</option>
+								</select>
+							</div>
+							
+							<div class="widget_list_item">Alternate editions?</div>
+							<div class="field">
+								<!--<#ERROR name="ERRORAcceptAlternateEdition">--><select id="AcceptAlternateEdition" name="AcceptAlternateEdition" size="1" class="f-name" tabindex="11">
+									<option selected><#PARAM name="AcceptAlternateEdition"></option>
+									<option>No</option>
+									<option>Yes</option>
+								</select>
+							</div>
+							
+							<div class="widget_list_item">Alternate formats?</div>
+							<div class="field">
+								<!--<#ERROR name="ERRORGISTWeb.AlternativeFormat">--><select id="GISTWeb.AlternativeFormat" name="GISTWeb.AlternativeFormat" size="1" class="f-name" tabindex="12">
+									<option selected><#DatabaseTableField Table="GISTWeb" Field="AlternativeFormat"></option>
+									<option>No</option>
+									<option >Yes</option>
+								</select>
+							</div>
+										
+
+									<!--<div class="question">How essential is this to your studies?</div>-->
+									<!--<div class="answer">-->
+										<!--<#ERROR name="ERRORGISTWeb.Importance">--><!--<select id="GISTWeb.Importance" name="GISTWeb.Importance" size="1" class="f-name" tabindex="14">
+											<option selected><#databasetablefield table="GISTWeb" field="Importance"></option>
+											<option>Essential for class/research</option>
+											<option>Required textbook</option>
+											<option>Unsure</option>
+											<option>Unessential</option>
+										</select>
+									</div>-->
+
+									
+		
+									
+									<div class="widget_field_name">Comments:</div>
+									<div class="field"><!--<#ERROR name="ERRORNotes">--><textarea id="Notes" name="Notes" rows="3" cols="40" class="f-name" tabindex="16"><#PARAM name="Notes"></textarea></div>					
+								
+										
+										
+										
+										
+										<div class="submit">
+											<input type="submit" name="SubmitButton" value="Submit Request" class="f-submit" tabindex="60" />
+											<input type="reset" name="ResetButton" value="Clear Form" class="f-submit" tabindex="61" onclick="window.location.reload();"/>
+											<input type="submit" name="SubmitButton" value="Cancel Request" class="f-submit" tabindex="62" />
+											<div id="deliveryEst">Please allow up to 7 business days for delivery.</div>
+											
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+ 					<!-- End redesigned GIST form -->
+ 	 		</form>
+
+<div class="copyright">The copyright law of the United States (Title 17, United States Code) governs the making of photocopies or other reproductions of copyrighted material. Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction. One of these specified conditions is that the photocopy or reproduction is not to be 'used for any purpose other than private study, scholarship or research'. If a user makes a request for, or later uses, a photocopy or reproduction for purposes in excess of 'fair use', that user may be liable for copyright infringement. This institution reserves the right to refuse to accept a copying order if, in its judgement, fulfillment of the order would involve violation of copyright law.</div>	
+<div style="text-align:center";><a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/"><img alt="Creative Commons License" style="border-width:0;margin-top:5px;" src="images/creativecommons.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.</div>
+
+
+<#INCLUDE filename="includes/drupalfooter_responsive.inc">
+
+<script type="text/javascript" language="javascript" src="gist/GISTv4.js">
+	if (document.getElementByID('CitedIn') == Null)
+	{return}
+	else ()
+</script>
+ 
+</body>
+</html>

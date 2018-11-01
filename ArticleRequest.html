@@ -1,0 +1,128 @@
+﻿<html>
+<#INCLUDE filename="includes/drupalheader_responsive.inc">
+<head>
+<title>Information Delivery Services | </title>
+<link rel="stylesheet" type="text/css" href="styles/GIST4Web.css">	
+</head>
+<body>
+
+<!-------BODY CONTENT RIGHT SIDE  BEGINS --->		
+
+<!-- <h1>Information Delivery Services (IDS)</h1> -->
+<h1>Request a Copy of a Journal Article</h1>
+
+<!--div>
+	<h3>You are signed in as <#PARAM name="Username"></h3> 
+	<ul>
+		<li><a href="<#ACTION action="10" form="81">">Account Settings</a></li>
+		<li><a href="#acct_notifications">Recent Account Notifications</a></li>
+		<li><a href="<#ACTION action="99">">Logout</a></li>
+	</ul>
+</div-->
+<#INCLUDE filename="includes/include_menu_you_are_logged_in_as.html">
+<form action="illiad.dll" method="post" id="GISTform" name="ArticleRequest" >
+                <input type="hidden" name="ILLiadForm" value="ArticleRequest" />
+                <input type="hidden" name="Username" value="<#PARAM name="Username">" />
+                <input type="hidden" name="SessionID" value="<#PARAM name="SessionID">" />
+				<input name="RequestType" type="hidden" id="RequestType" value="Article" />
+				<input name="CallNumber" type="hidden" id="CallNumber" value="<#PARAM name="CallNumber">">
+				<input id="DocumentType" name="DocumentType" type="hidden" value="<#PARAM name="DocumentType">">
+				<!--<input name="GISTWeb.Group3Libraries" type="hidden" id="GISTWeb.Group3Libraries" value="<#DatabaseTableField Table="GISTWeb" Field="Group3Libraries">">
+				<input name="GISTWeb.Group2Libraries" type="hidden" id="GISTWeb.Group2Libraries" value="<#DatabaseTableField Table="GISTWeb" Field="Group2Libraries">">
+				<input name="GISTWeb.FullTextOnline" id="GISTWeb.FullTextOnline" type="hidden" value="<#DatabaseTableField Table="GISTWeb" Field="FullTextOnline">">
+				<input id="GISTWeb.FullTextURL" name="GISTWeb.FullTextURL" type="hidden" value="<#DatabaseTableField Table="GISTWeb" Field="FullTextURL">">
+				<input name="GISTWeb.LocallyHeld" id="GISTWeb.LocallyHeld" type="hidden" value="<#DatabaseTableField Table="GISTWeb" Field="LocallyHeld">">-->
+				<input id="ESPNumber" name="ESPNumber" type="hidden" size="20" class="f-name" value="<#PARAM name="ESPNumber">">
+				<!--<input id="GISTWeb.Delivery" name="GISTWeb.Delivery" type="hidden" size="1" class="f-name" value="Hold at Service Desk">-->
+				<!--Old locally held/full text--><input name="WantedBy" type="hidden" id="WantedBy" value="" />
+				<!--Old full text URL--><input id="CitedIn" name="CitedIn" type="hidden" value="<#PARAM name="CitedIn">">
+				<!--<input name="DocumentType" type="hidden" id="DocumentType" value="Testing">-->
+<!--  
+                	<div><h3><#STATUS></h3></div> -->
+					
+					<!-- Begin redesigned redesigned GIST form :) -->
+					
+<div id="gist_table">
+<div class="no-height-40-percent">
+<fieldset id="info_column">
+<legend>Journal Information</legend>
+<div id="item_info">
+	<div class="gist_form_contents">
+	<div class="field_name">* Title:</div><div class="field"><!--<#ERROR name="ERRORPhotoJournalTitle">--><input id="PhotoJournalTitle" name="PhotoJournalTitle" type="text" size="55" class="f-name" value="<#PARAM name="PhotoJournalTitle">"></div>
+	<div class="field_name">Volume:</div><div class="field"><!--<#ERROR name="ERRORPhotoJournalVolume">--><input id="PhotoJournalVolume" name="PhotoJournalVolume" type="text" size="55" class="f-name" value="<#PARAM name="PhotoJournalVolume">"></div>
+	<div class="field_name">Issue:</div><div class="field"><!--<#ERROR name="ERRORPhotoJournalIssue">--><input id="PhotoJournalIssue" name="PhotoJournalIssue" type="text" size="55" class="f-name" value="<#PARAM name="PhotoJournalIssue">"></div>
+	<div class="field_name">Month:</div><div class="field"><!--<#ERROR name="ERRORPhotoJournalMonth">--><input id="PhotoJournalMonth" name="PhotoJournalMonth" type="text" size="55" class="f-name" value="<#PARAM name="PhotoJournalMonth">"></div>
+	<div class="field_name">Year:</div><div class="field"><!--<#ERROR name="ERRORPhotoJournalYear">--><input id="PhotoJournalYear" name="PhotoJournalYear" type="text" size="55" class="f-name" value="<#PARAM name="PhotoJournalYear">"></div>
+	<div class="field_name">Publisher:</div><div class="field"><!--<#ERROR name="ERRORPhotoItemPublisher">--><input id="PhotoItemPublisher" name="PhotoItemPublisher" type="text" size="55" class="f-name" value="<#PARAM name="PhotoItemPublisher">"></div>
+	<div class="field_name">ISSN:</div> <div class="field"><!--<#ERROR name="ERRORISSN">--><input id="ISSN" name="ISSN" type="text" size="20" class="f-name" value="<#PARAM name="ISSN">"></div>
+	</div>
+	<h3 class="widget_title">Article Information</h3>
+	<div class="gist_form_contents">
+	<div class="field_name">* Title:</div><div class="field"><!--<#ERROR name="ERRORPhotoArticleTitle">--><input id="PhotoArticleTitle" name="PhotoArticleTitle" type="text" size="55" class="f-name" value="<#PARAM name="PhotoArticleTitle">"></div>
+	<div class="field_name">Author:</div><div class="field"><!--<#ERROR name="ERRORPhotoArticleAuthor">--><input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="55" class="f-name" value="<#PARAM name="PhotoArticleAuthor">"></div>
+	<div class="field_name">Pages:</div><div class="field"><!--<#ERROR name="ERRORPhotoJournalInclusivePages">--><input id="PhotoJournalInclusivePages" name="PhotoJournalInclusivePages" type="text" size="55" class="f-name" value="<#PARAM name="PhotoJournalInclusivePages">"></div>
+	</div>
+</div>
+</fieldset>
+</div>
+	
+<!-- Account Activity -->
+<div class="no-height-40-percent">
+<fieldset id="getit_column">
+<legend>Get It</legend>
+<div class="gist_form_contents">
+	<!--Load the calendar date picker-->
+	<script type="text/javascript" language="javascript" src="js/datepicker.js"></script -->
+	
+	<div class="widget_box" id="ill_request_row">
+		<h3 class="widget_title">From IDS</h3>
+		<div class="widget_field_name">* By when do you need this?</div>
+		<div class="widget_field"><!--<#ERROR name="ERRORNotWantedAfter">--><input style="width: 200px !important;" readonly="readonly" id="NotWantedAfter" name="NotWantedAfter" type="text" size="10" class="f-name" tabindex="9" value="<#PARAM name="NotWantedAfter">"> <image style="cursor:pointer;" src="images/calendar-20px.png" alt="Select Date" onclick="displayDatePicker('NotWantedAfter', this);" /></div>
+							
+		<div style="font-weight:bold; margin-top:10px; margin-bottom:10px;"><b>Will you accept...</b></div>
+		<div class="widget_list_item">Non-English versions?</div>
+		<div class="field">
+			<!--<#ERROR name="ERRORAcceptNonEnglish">--><select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
+				<option selected>No</option>
+				<option>Yes</option>
+			</select>
+		</div>
+		
+		<div class="widget_list_item">Alternate editions?</div>
+		<div class="field">
+			<!--<#ERROR name="ERRORAcceptAlternateEdition">--><select id="AcceptAlternateEdition" name="AcceptAlternateEdition" size="1" class="f-name" >
+				<option>No</option>
+				<option selected>Yes</option>
+			</select>
+		</div>
+
+	
+		<div class="widget_field_name">Comments:</div>
+		<div class="field"><!--<#ERROR name="ERRORNotes">--><textarea id="Notes" name="Notes" rows="3" cols="40" class="f-name" ><#PARAM name="Notes"></textarea></div>					
+
+		<div class="submit">
+			<input type="submit" name="SubmitButton" value="Submit Request" class="f-submit" />
+			<input type="reset" name="ResetButton" value="Clear Form" class="f-submit" onclick="window.location.reload();"/>
+			<input type="submit" name="SubmitButton" value="Cancel Request" class="f-submit" />
+			<div id="deliveryEst">Please allow up to 5 business days for delivery.<br/><br/></div>
+			
+</div>
+</div>
+</fieldset>
+</div>
+
+<div style="clear:both; margin:0px !important; padding:0px !important;">&nbsp;</div>
+ 
+<!--  </div>	 --><!--End div id "gist_table">				
+					
+
+<!-- End redesigned redesigned GIST form -->
+</form>	
+
+<div class="copyright">The copyright law of the United States (Title 17, United States Code) governs the making of photocopies or other reproductions of copyrighted material. Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction. One of these specified conditions is that the photocopy or reproduction is not to be 'used for any purpose other than private study, scholarship or research'. If a user makes a request for, or later uses, a photocopy or reproduction for purposes in excess of 'fair use', that user may be liable for copyright infringement. This institution reserves the right to refuse to accept a copying order if, in its judgement, fulfillment of the order would involve violation of copyright law.</div>	
+<div style="text-align:center";><a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/"><img alt="Creative Commons License" style="border-width:0;margin-top:5px;" src="images/creativecommons.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.</div>
+
+
+<#INCLUDE filename="includes/drupalfooter_responsive.inc">
+  </body>
+</html>
