@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ILLiad - New User Registration</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=EmulateIE9, IE=EDGE" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<link rel="apple-touch-icon" href="iphone-icon.png" />
+      <meta charset="utf-8" />
+<link rel="shortcut icon" href="https://www.geneseo.edu/sites/all/themes/geneseo_library/favicon.ico" type="image/x-icon" />
+
+<link type="text/css" href="https://eres.geneseo.edu/milne-styles-js/geneseo_all_milne_library.css" rel="stylesheet" media="all"  /> 
+<link type="text/css" href="https://illiad.geneseo.edu/styles/GIST4Web.css" rel="stylesheet" media="all"  /> 
+</head>	
+<body>   
+<div><!---  main  --->
+<!--Milne uses this color border; you can use it, change it, or delete it -->
+<div style="height: 20px;width: 100%; margin: 0px ! important; background-color: #345290;"></div>
+<!--end border -->
+<div style="margin:0px 20px 20px 20px;">
+    <div style="width: 100%;">   
+ <!-- LOGO GOES HERE -->       
+<!-- <div style="float:left; margin-top:-20px;"><a href="https://www.geneseo.edu/library"><img img alt="Milne Library SUNY Geneseo" title="Milne Library SUNY Geneseo" src="https://eres.geneseo.edu/milne-logo/milne-library-logo.png" style="margin-top:0px; width:85%;"></a> </div>   --> 	
+	</div>
+<!--END LOGO AREA -->
+<!--OPTIONAL PSEUDO BREADCRUMB trail can go here -->
+<div class="breadcrumb" style="margin-top:20px;"><!-- <a href="https://www.geneseo.edu/">SUNY Geneseo</a> &raquo; <a href="https://www.geneseo.edu/library">Milne Library</a>
+ &raquo; <a href="https://illiad.geneseo.edu">Information Delivery Services</a> &raquo; <a style="color:#b85533 !important;" href="https://illiad.geneseo.edu/lending/lendinglogon.html">ILLiad InterLibrary Loan Request</a> -->
+ </div>
+ <!-- END OPTIONAL PSEUDO BREADCRUMB TRAIL -->
+<div id="rightSideContent" >
+<!--- BODY CONTENT RIGHT SIDE  BEGINS --->
+<!-- <body id="type-a">
+<div id="wrap">
+  <div id="header"> <span id="site-name">ILLiad</span> -->
+    <h1>ILLiad New User Registration</h1>
+<!--     <div id="status"><#STATUS></div> -->
+<!--   </div>
+  <div id="content-wrap">
+    <div id="content"> -->
+	<div id="main_menu_table" style="margin-bottom:20px;">	
+	  <div id="status">	<p><span style="color:#b85533;font-size: 1.3em !important;"><b><#STATUS></b></span><p></div>
+	  
+		<form action="illiadlending.dll" method="post" name="LendingRegistration" class="f-wrap-request">
+			<input type="hidden" name="ILLiadForm" value="LendingRegistration">
+			<div id="logonform" width="90%;">
+				<div class="req"><b>*</b> Indicates required field</div>
+				<fieldset>			
+					<legend>New User Registration for ILLiad</legend>						
+					
+					<label for="LibraryName" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORLibraryName">"><b>Library Name</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						</span>
+						<input id="LibraryName" name="LibraryName" type="text" size="40" class="f-name" tabindex="5" value="<#PARAM name="LibraryName">"><br />	
+					</label>		
+										
+					<label for="Address1" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORAddress1">"><b>Primary Address Line 1</b></span>
+						</span>
+						<input id="Address1" name="Address1" type="text" size="40" class="f-name" tabindex="10" value="<#PARAM name="Address1">"><br />						
+					</label>
+					
+					<label for="Address2" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="<#ERROR name="ERRORAddress2">"><b>Primary Address Line 2</b></span>
+						</span>
+						<input id="Address2" name="Address2" type="text" size="40" class="f-name" tabindex="15" value="<#PARAM name="Address2">"><br />
+					</label>
+					
+					<label for="Address3" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="<#ERROR name="ERRORAddress3">"><b>Primary Address Line 3</b></span>
+						</span>
+						<input id="Address3" name="Address3" type="text" size="40" class="f-name" tabindex="20" value="<#PARAM name="Address3">"><br />
+					</label>
+					
+					<label for="Address4" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="<#ERROR name="ERRORAddress4">"><b>Primary Address Line 4</b></span>
+						</span>
+						<input id="Address4" name="Address4" type="text" size="40" class="f-name" tabindex="25" value="<#PARAM name="Address4">"><br />
+					</label>
+					
+					<label for="BAddress1" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="<#ERROR name="ERRORBAddress1">"><b>Billing Address Line 1</b></span>
+						</span>
+						<input id="BAddress1" name="BAddress1" type="text" size="40" class="f-name" tabindex="30" value="<#PARAM name="BAddress1">"><br />						
+					</label>
+					
+					<label for="BAddress2" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="<#ERROR name="ERRORBAddress2">"><b>Billing Address Line 2</b></span>
+						</span>
+						<input id="BAddress2" name="BAddress2" type="text" size="40" class="f-name" tabindex="35" value="<#PARAM name="BAddress2">"><br />
+					</label>
+					
+					<label for="BAddress3" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="<#ERROR name="ERRORBAddress3">"><b>Billing Address Line 3</b></span>
+						</span>
+						<input id="BAddress3" name="BAddress3" type="text" size="40" class="f-name" tabindex="40" value="<#PARAM name="BAddress3">"><br />
+					</label>
+					
+					<label for="BAddress4" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="<#ERROR name="ERRORBAddress4">"><b>Billing Address Line 4</b></span>
+						</span>
+						<input id="BAddress4" name="BAddress4" type="text" size="40" class="f-name" tabindex="45" value="<#PARAM name="BAddress4">"><br />
+					</label>
+					
+					<label for="BorrowingDeptEmail" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORBorrowingDeptEmail">"><b>E-Mail Address</b></span>
+						</span>
+						<input id="BorrowingDeptEmail" name="BorrowingDeptEmail" type="text" size="40" class="f-name" tabindex="50" value="<#PARAM name="BorrowingDeptEmail">"><br />						
+					</label>		
+					
+					<label for="Phone" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORPhone">"><b>Daytime Phone</b></span>
+						</span>
+						<input id="Phone" name="Phone" type="text" size="40" class="f-name" tabindex="55" value="<#PARAM name="Phone">"><br />						
+					</label>
+					
+					<label for="Fax">
+						<span class="field">
+							<span class="<#ERROR name="ERRORFax">"><b>Fax</b></span>
+						</span>
+						<input id="Fax" name="Fax" type="text" size="40" class="f-name" tabindex="60" value="<#PARAM name="Fax">"><br />						
+					</label>
+					
+					<label for="ArielAddress" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="<#ERROR name="ERRORArielAddress">"><b>Ariel Address</b></span>
+						</span>
+						<input id="ArielAddress" name="ArielAddress" type="text" size="40" class="f-name" tabindex="65" value="<#PARAM name="ArielAddress">"><br />						
+					</label>
+					
+					<label for="OdysseyAddress" style="width:30%; text-align:left; margin-right:10px;" >
+						<span class="field">
+							<span class="<#ERROR name="ERROROdysseyAddress">"><b>OdysseyAddress</b></span>
+						</span>
+						<input id="OdysseyAddress" name="OdysseyAddress" type="text" size="40" class="f-name" tabindex="70" value="<#PARAM name="OdysseyAddress">"><br />						
+					</label>
+					
+					<label for="Username" style="width:30%; text-align:left; margin-right:10px;">
+					<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORUsername">"><b>Symbol</b></span><br />
+						<span class="note">This will also be used as your logon username.</span>					</span>
+						<input id="Username" name="Username" type="text" size="40" class="f-name" tabindex="75" value="<#PARAM name="Username">"><br />						
+					</label>
+					
+					<label for="Password1" style="width:30%; text-align:left; margin-right:10px;">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORPassword1">"><b>Choose a Password</b></span><br />
+							<span class="note">Case sensitive</span>
+						</span>
+						<input id="Password1" name="Password1" type="password" size="40" class="f-name" tabindex="80" value="<#PARAM name="Password1">"><br />						
+					</label>
+					
+					<label for="Password2" style="width:30%; text-align:left; margin-right:10px;">						
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORPassword2">"><b>Re-enter Password</b></span><br />
+							<span class="note">Case sensitive</span>
+						</span>
+						<input id="Password2" name="Password2" type="password" size="40" class="f-name" tabindex="85" value="<#PARAM name="Password2">"><br />						
+					</label>
+                    <div class="f-submit-wrap" style="clear:both; margin:20px 0px 20px 0px;">
+					<br/>
+						<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit" tabindex="90" />
+						<input type="reset" name="ResetButton" value="Clear Form" class="f-submit" tabindex="95" />
+						<input type="submit" name="SubmitButton" value="Cancel - Exit ILLiad System" class="f-submit" tabindex="100" />
+					</div>
+				</fieldset>
+		</form>	
+</div>		
+      	<#INCLUDE filename="include_footer.html">
+

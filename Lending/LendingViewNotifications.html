@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ILLiad - Notifications</title> 
+<#INCLUDE filename="include_header.html">   
+<link href="<#ACTION action="2" type="41" value="RSSID" valueType="lookup" absolutePath="false" includeSessionID="false">" rel="alternate" type="application/rss+xml" title="ILLiad Notifications" />
+</head>
+<div id="main_menu_table" style="margin-bottom:20px;">
+
+
+<div class="no-height-right-60-percent">
+<h2>View Notifications</h2>
+            <div class="default-table" style="margin-top:18px;">
+			<a href="<#ACTION action="2" type="41" value="RSSID" valueType="lookup" absolutePath="true" includeSessionID="false">"><img src="/images/RSS_Small.png"> Subscribe to Notifications Feed</a><br />					
+				<br/>
+				<#TABLE name="ViewNotifications" headerText="Notifications" noDataAction="ShowMessageRow" noDataMessage="No Notifications">
+</div>
+	
+	
+
+</div>	
+<div class="no-height-25-percent">
+        <#INCLUDE filename="include_menu.html">
+</div>			
+<div style="clear:both; margin:10px !important; padding:0px !important;">&nbsp;</div>
+	<#INCLUDE filename="include_footer.html">
+</body>
+</html>

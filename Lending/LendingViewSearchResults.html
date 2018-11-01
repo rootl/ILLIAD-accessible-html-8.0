@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ILLiad - Search Results</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+<#INCLUDE filename="include_header.html">   
+</head>
+
+
+<div id="main_menu_table" style="margin-bottom:20px;">
+	
+<div class="no-height-right-60-percent">
+<h2>Search Results</h2>
+			<div class="default-table">			
+				<#TABLE name="ViewSearchResults" headerText="Search Results" noDataAction="ShowMessageRow" noDataMessage="No Results">
+			</div>
+		
+</div>	
+<div class="no-height-25-percent">
+        <#INCLUDE filename="include_menu.html">
+</div>		
+<div style="clear:both; margin:10px !important; padding:0px !important;">&nbsp;</div>
+	<#INCLUDE filename="include_footer.html">
+</body>
+</html>
+

@@ -1,0 +1,123 @@
+<div id="NotificationPreferences">    
+    <input type="hidden" name="UseGranularNotifications" value="Yes" />
+	<div class="notificationPreferences">        
+        <label for="NotifyGroup">
+			<span class="field_name">
+			<span style="font-size:1.4em !important; color:#2357af; font-weight:bold;" class="<#ERROR name="ERRORNotifyGroup">">Preferred Notification Method</span><br/>
+				
+                <span  style="font-size:1.2em !important;" class="note">When your material is ready for pickup or has been shipped</span>&nbsp; &nbsp;
+			</span>
+			<select id="NotifyGroup" name="NotifyGroup" size="1" class="f-name">
+				<option selected><#PARAM name="NotifyGroup"></option>
+				<option>Phone</option>
+				<option>Electronic</option>
+			</select><br />
+		</label>
+		</div>
+	
+    <div class="notificationPreferences">
+        <table id="AccountPreferences" style="width: 100%;">
+		
+		
+            <thead>
+                <tr style="background-color:#f1f8fc !important;">
+                    <td width="80%"><span style="font-size:1.2em !important;color:#2357af; font-weight:bold;">Account Notification Preferences</span></td>
+<!--                     <td width="80%"><span><b>Account Notification Preferences</b></span></td>-->                    
+					<td width="20%">Email</td>
+                    <!--<td width="20%">Text Message<div class="caption"><a data-notification-check="SMS" data-notification-action="all">All</a> | <a data-notification-check="SMS" data-notification-action="none">None</a></div></td>-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Notify me when my account has been cleared</td>
+                    <td>
+                        <input type="checkbox" id="Placeholder_ClearedUser_Email" name="Placeholder_ClearedUser_Email" disabled="disabled" checked="checked">
+                    </td>
+                    <!--<td>
+                        <input type="checkbox" id="Notification_ClearedUser_SMS" name="Notification_ClearedUser_SMS" value="Yes" <#CHECKED name='Notification_ClearedUser_SMS'>>
+                    </td>-->
+                </tr>
+                <tr>
+                    <td>Notify me when I request a password reset</td>
+                    <td>
+                        <input type="checkbox" id="Placeholder_PasswordReset_Email" name="Placeholder_PasswordReset_Email" disabled="disabled" checked="checked">
+                    </td>
+                    <!--<td>
+                        <input type="checkbox" id="Notification_PasswordReset_SMS" name="Notification_PasswordReset_SMS" value="Yes" <#CHECKED name='Notification_PasswordReset_SMS'>>
+                    </td>-->
+                </tr>
+            </tbody>
+        </table>
+
+
+  </div>	
+  <div class="notificationPreferences">                  
+        <table id="RequestPreferences" style="width: 100%;">
+            <thead>
+                <tr style="background-color:#f1f8fc !important;">
+                    <td width="80%"><span style="font-size:1.2em !important;color:#2357af; font-weight:bold;">Request Notification Preferences</span></td>
+<!-- 					<td width="80%"><span><b>Request Notification Preferences</b></span></td> -->
+                    <td width="20%">Email <div class="caption"><a data-notification-check="Email" data-notification-action="all">All</a> | <a data-notification-check="Email" data-notification-action="none">None</a></div></td>
+                    <!--<td width="20%">Text Message <div class="caption"><a data-notification-check="SMS" data-notification-action="all">All</a> | <a data-notification-check="SMS" data-notification-action="none">None</a></div></td>-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Notify me when my request is ready for pickup</td>
+                    <td>
+                        <input type="checkbox" id="Notification_RequestPickup_Email" name="Notification_RequestPickup_Email" value="Yes" <#CHECKED name='Notification_RequestPickup_Email' default='True'>>
+                    </td>
+                    <!-- <td>
+                        <input type="checkbox" id="Notification_RequestPickup_SMS" name="Notification_RequestPickup_SMS" value="Yes" <#CHECKED name='Notification_RequestPickup_SMS' default='True'>>
+                    </td> -->
+                </tr>
+                <tr>
+                    <td>Notify me when my request has been shipped</td>
+                    <td>
+                        <input type="checkbox" id="Notification_RequestShipped_Email" name="Notification_RequestShipped_Email" value="Yes" <#CHECKED name='Notification_RequestShipped_Email' default='True'>>
+                    </td>
+                    <!-- <td>
+                        <input type="checkbox" id="Notification_RequestShipped_SMS" name="Notification_RequestShipped_SMS" value="Yes" <#CHECKED name='Notification_RequestShipped_SMS' default='True'>>
+                    </td> -->
+                </tr>
+                <tr>
+                    <td>Notify me when my request has been delivered electronically</td>
+                    <td>
+                        <input type="checkbox" id="Notification_RequestElectronicDelivery_Email" name="Notification_RequestElectronicDelivery_Email" value="Yes" <#CHECKED name='Notification_RequestElectronicDelivery_Email' default='True'>>
+                    </td>
+                    <!-- <td>
+                        <input type="checkbox" id="Notification_RequestElectronicDelivery_SMS" name="Notification_RequestElectronicDelivery_SMS" value="Yes" <#CHECKED name='Notification_RequestElectronicDelivery_SMS' default='True'>>
+                    </td> -->
+                </tr>
+                <tr>
+                    <td>Notify me when my checked out material is overdue</td>
+                    <td>
+                        <input type="checkbox" id="Notification_RequestOverdue_Email" name="Notification_RequestOverdue_Email" value="Yes" <#CHECKED name='Notification_RequestOverdue_Email' default='True'>>
+                    </td>
+                    <!--<td>
+                        <input type="checkbox" id="Notification_RequestOverdue_SMS" name="Notification_RequestOverdue_SMS" value="Yes" <#CHECKED name='Notification_RequestOverdue_SMS' default='True'>>
+                    </td>-->
+                </tr>
+                <tr>
+                    <td>Notify me when my request has been cancelled</td>
+                    <td>
+                        <input type="checkbox" id="Notification_RequestCancelled_Email" name="Notification_RequestCancelled_Email" value="Yes" <#CHECKED name='Notification_RequestCancelled_Email' default='True'>>
+                    </td>
+                    <!-- <td>
+                        <input type="checkbox" id="Notification_RequestCancelled_SMS" name="Notification_RequestCancelled_SMS" value="Yes" <#CHECKED name='Notification_RequestCancelled_SMS'>>
+                    </td> -->
+                </tr>
+                <tr>
+                    <td>Notify me when the library has other information about my request</td>
+                    <td>
+                        <input type="checkbox" id="Placeholder_RequestOther_Email" name="Placeholder_RequestOther_Email" disabled="disabled" checked="checked">                        
+                    </td>
+                    <!-- <td>
+                        <input type="checkbox" id="Notification_RequestOther_SMS" name="Notification_RequestOther_SMS" value="Yes" <#CHECKED name='Notification_RequestOther_SMS'>>
+                    </td> -->
+                </tr>
+            </tbody>
+        </table>
+		</div>
+<!--     </div>    
+</div> -->

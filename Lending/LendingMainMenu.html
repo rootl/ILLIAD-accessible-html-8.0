@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Information Delivery Services | </title>  
+<#INCLUDE filename="include_header.html">   
+</head>
+
+<div id="main_menu_table" style="margin-bottom:20px;">
+	
+
+<div class="no-height-right-60-percent">
+<h2>ILLiad Main Menu</h2>
+<div class="default-table" style="margin-top:20px;">
+
+                <#TABLE name="ViewOutstandingLendingRequests" headerText="Outstanding Requests" noDataAction="ShowMessageRow" noDataMessage="No Requests" column="TransactionNumber:Transaction" column="Title" column="Author" column="TransactionStatus:Status">
+            </div>
+        <div id="sidebar" style="margin-top:20px; border-top:2px solid #ddd; padding:10px 0px;">
+			<#ALERTS>		
+		</div>            
+</div>
+	<div class="no-height-25-percent">
+        <#INCLUDE filename="include_menu.html">
+</div>	
+<div style="clear:both; margin:10px !important; padding:0px !important;">&nbsp;</div>
+	<#INCLUDE filename="include_footer.html">
+</body>
+</html>

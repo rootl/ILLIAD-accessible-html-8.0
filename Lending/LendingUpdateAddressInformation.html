@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ILLiad - Change Address Information</title> 
+<#INCLUDE filename="include_header.html">   
+</head>
+
+<!-- <h2 style="margin:0px !important;">Change Address Information</h2> -->
+<div id="main_menu_table" style="margin-bottom:20px;">
+
+<div class="no-height-right-60-percent">
+		<form action="illiadlending.dll" method="post" name="LendingUpdateAddressInformation" class="f-wrap-request">
+			<input type="hidden" name="ILLiadForm" value="LendingUpdateAddressInformation">
+
+			<fieldset>			
+					<legend>Change Address Information</legend>
+					<div class="req"><b>*</b> Indicates required field</div>
+<br/>					
+					<label for="LibraryName">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORLibraryName">"><b>Library Name</b></span>
+						</span>
+						<input id="LibraryName" name="LibraryName" type="text" size="40" class="f-name" tabindex="5" value="<#PARAM name="LibraryName">"><br />	
+					</label>		
+										
+					<label for="Address1">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORAddress1">"><b>Primary Address Line 1</b></span>
+						</span>
+						<input id="Address1" name="Address1" type="text" size="40" class="f-name" tabindex="10" value="<#PARAM name="Address1">"><br />						
+					</label>
+					
+					<label for="Address2">
+						<span class="field">
+							<span class="<#ERROR name="ERRORAddress2">"><b>Primary Address Line 2</b></span>
+						</span>
+						<input id="Address2" name="Address2" type="text" size="40" class="f-name" tabindex="15" value="<#PARAM name="Address2">"><br />
+					</label>
+					
+					<label for="Address3">
+						<span class="field">
+							<span class="<#ERROR name="ERRORAddress3">"><b>Primary Address Line 3</b></span>
+						</span>
+						<input id="Address3" name="Address3" type="text" size="40" class="f-name" tabindex="20" value="<#PARAM name="Address3">"><br />
+					</label>
+					
+					<label for="Address4">
+						<span class="field">
+							<span class="<#ERROR name="ERRORAddress4">"><b>Primary Address Line 4</b></span>
+						</span>
+						<input id="Address4" name="Address4" type="text" size="40" class="f-name" tabindex="25" value="<#PARAM name="Address4">"><br />
+					</label>
+					
+					<label for="BAddress1">
+						<span class="field">
+							<span class="<#ERROR name="ERRORBAddress1">"><b>Billing Address Line 1</b></span>
+						</span>
+						<input id="BAddress1" name="BAddress1" type="text" size="40" class="f-name" tabindex="30" value="<#PARAM name="BAddress1">"><br />						
+					</label>
+					
+					<label for="BAddress2">
+						<span class="field">
+							<span class="<#ERROR name="ERRORBAddress2">"><b>Billing Address Line 2</b></span>
+						</span>
+						<input id="BAddress2" name="BAddress2" type="text" size="40" class="f-name" tabindex="35" value="<#PARAM name="BAddress2">"><br />
+					</label>
+					
+					<label for="BAddress3">
+						<span class="field">
+							<span class="<#ERROR name="ERRORBAddress3">"><b>Billing Address Line 3</b></span>
+						</span>
+						<input id="BAddress3" name="BAddress3" type="text" size="40" class="f-name" tabindex="40" value="<#PARAM name="BAddress3">"><br />
+					</label>
+					
+					<label for="BAddress4">
+						<span class="field">
+							<span class="<#ERROR name="ERRORBAddress4">"><b>Billing Address Line 4</b></span>
+						</span>
+						<input id="BAddress4" name="BAddress4" type="text" size="40" class="f-name" tabindex="45" value="<#PARAM name="BAddress4">"><br />
+					</label>
+					
+					<label for="BorrowingDeptEmail">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORBorrowingDeptEmail">"><b>E-Mail Address</b></span>
+						</span>
+						<input id="BorrowingDeptEmail" name="BorrowingDeptEmail" type="text" size="40" class="f-name" tabindex="50" value="<#PARAM name="BorrowingDeptEmail">"><br />						
+					</label>
+					
+					<label for="Phone">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORPhone">"><b>Daytime Phone</b></span>
+						</span>
+						<input id="Phone" name="Phone" type="text" size="40" class="f-name" tabindex="55" value="<#PARAM name="Phone">"><br />						
+					</label>
+					
+					<label for="Fax">
+						<span class="field">
+							<span class="<#ERROR name="ERRORFax">"><b>Fax</b></span>
+						</span>
+						<input id="Fax" name="Fax" type="text" size="40" class="f-name" tabindex="60" value="<#PARAM name="Fax">"><br />						
+					</label>
+					
+					<label for="ArielAddress">
+						<span class="field">
+							<span class="<#ERROR name="ERRORArielAddress">"><b>Ariel Address</b></span>
+						</span>
+						<input id="ArielAddress" name="ArielAddress" type="text" size="40" class="f-name" tabindex="65" value="<#PARAM name="ArielAddress">"><br />						
+					</label>
+					
+					<label for="OdysseyAddress">
+						<span class="field">
+							<span class="<#ERROR name="ERROROdysseyAddress">"><b>OdysseyAddress</b></span>
+						</span>
+						<input id="OdysseyAddress" name="OdysseyAddress" type="text" size="40" class="f-name" tabindex="70" value="<#PARAM name="OdysseyAddress">"><br />						
+					</label>
+										               
+                    <div class="f-submit-wrap" style="clear:both; margin:20px 0px 20px 0px;">
+						<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit" tabindex="75" />
+						<input type="submit" name="SubmitButton" value="Cancel - Exit to Main Menu" class="f-submit" tabindex="80" />
+					</div>
+				</fieldset>
+		</form>		
+</div>
+<div class="no-height-25-percent">
+        <#INCLUDE filename="include_menu.html">
+</div>	
+<div style="clear:both; margin:10px !important; padding:0px !important;">&nbsp;</div>
+	<#INCLUDE filename="include_footer.html">
+</body>
+</html>

@@ -1,0 +1,1413 @@
+/* GIST4Web.css -- Stylesheet for the GIST Acquisitions Manager ILLiad Request Forms */
+/* This CSS file contains the styles  and overrides for the IDS ILLiad webpages, Lending ILLiad Webpages, and GIST widgets. */
+/* Style overrides include tables, LibApps FAQ Widget, status and alerts, datepicker, form inputs, selects, dropdowns, and textareas */
+/* Use this for ALL request form styles (LoanRequest, GenericRequest, etc.). */
+/* Main styles such as fieldsets and the Milne header are in the Main stylesheet https://eres.geneseo.edu/milne-styles-js/geneseo_all_milne_library.css */
+/* This stylesheet is intended to be distributed as part of the GIST Acquisitions Manager at http://gist.idsproject.org/.*/
+/* This work is licensed under a Creative Commons Attribution 3.0 United States License. http://creativecommons.org/licenses/by/3.0/us/ */
+
+/* Updated on May 17, 2011 by Tim Bowersox, bowersox@geneseo.edu. */
+/* Updated on March 5, 2017 by Leah M Root: rootl@geneseo.edu ; https://www.geneseo.edu/library/leah-root */
+
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ 
+ 
+@import 'https://fonts.googleapis.com/css?family=Open+Sans'; 
+
+
+@font-face {
+    font-family: "Neutraface Text";
+    src: url('https://illiad.geneseo.edu/fonts/NeutrafaceText-Book.eot');
+    src: url("https://illiad.geneseo.edu/fonts/NeutrafaceText-Book.eot?#iefix") format("embedded-opentype"),
+         url("https://illiad.geneseo.edu/fonts/NeutrafaceText-Book.woff2") format("woff2"),
+         url("https://illiad.geneseo.edu/fonts/NeutrafaceText-Book.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Neutraface Headings";
+    src: url('https://illiad.geneseo.edu/fonts/NeutrafaceText-Bold.eot');
+    src: url("https://illiad.geneseo.edu/fonts/NeutrafaceText-Bold.eot?#iefix") format("embedded-opentype"),
+         url("https://illiad.geneseo.edu/fonts/NeutrafaceText-Bold.woff2") format("woff2"),
+         url("https://illiad.geneseo.edu/fonts/NeutrafaceText-Bold.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('https://illiad.geneseo.edu/fonts/Material Icons'),
+       local('https://illiad.geneseo.edu/fonts/MaterialIcons-Regular'),
+       url(https://illiad.geneseo.edu/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+       url(https://illiad.geneseo.edu/fonts/MaterialIcons-Regular.woff) format('woff'),
+       url(https://illiad.geneseo.edu/fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+
+/** Set Neutraface as headings font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Neutraface Text";
+}
+
+/* Not entirely sure why this is necessary here */
+strong {
+  font-weight: 700;
+}
+
+.no-pad {
+  padding: 0!important;
+}
+.no-pad-top {
+  padding-top: 0!important;
+}
+.no-pad-right {
+  padding-right: 0!important;
+}
+.no-pad-bottom {
+  padding-bottom: 0!important;
+}
+.no-pad-left {
+  padding-left: 0!important;
+}
+span.underline {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+/*breadcrumb*/
+
+
+@media(max-width: 660px) {
+.breadcrumb,#rightSideContent h1, #rightSideContent p.subheading, ul.subheading {
+float:left;
+clear:both;
+width:100%;
+margin:20px 20px 10px 0px;
+}
+
+ul.subheading li{
+	margin-right: 40px;
+}
+}
+
+.s-la-widget *, #s-la-widget-761
+{ /*styles for the Frequently Asked Questions widget */
+background:transparent !important;
+background:none !important;
+border:none !important;
+padding-left: 5px !important;
+}
+
+.s-la-widget h1, .s-la-widget h3,  #s-la-widget-761 h1, #s-la-widget-761 h3
+{
+display: none !important;
+visibiliy: hiddenn !important;
+}
+
+.s-la-widget .s-la-widget-header, #s-la-widget-761 .s-la-widget-header{
+margin-bottom: 5px !important;
+}
+
+
+.s-la-widget .s-la-faq-listing-meta
+{
+display: none !important;
+visibiliy: hiddenn !important;
+}
+
+body, div, p, td, tr {
+font-family: "Neutraface Text",sans-serif;
+font-weight:normal !important;
+}
+
+#s-la-widget-761 a{
+font-family: "Neutraface Text",sans-serif;
+font-weight:bold;
+font-size:16px !important;
+}
+#s-la-widget-761 a:link, #s-la-widget-761 a:visited
+{
+ color: #345290;
+}
+
+#s-la-widget-761 a:hover
+{
+ color: #86C1EA;
+}
+h2{
+font-family: "Neutraface Text";
+  font-size: 2em !important;
+  margin-top: 5px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  color: #b87733;
+  line-height: normal;
+  font-weight:normal !important;
+  text-align:left !important;								   												  
+/* font-size: 1.6em !important; */
+}
+
+h3, h3 widget_title{
+font-size: 1.4em !important;
+
+}
+
+
+
+table, th,tr, td {
+    border: 1px solid  #cccccc !important;
+    border-collapse: collapse;
+}
+th,tr,td {
+    padding: 5px 10px 5px 10px !important;
+}
+
+.row-header th{
+background-color:#f1f8fc !important;
+font-size: 1.2em !important;
+color:#b87733 !important;
+}
+
+.row-headings th{
+background-color:#ffffea !important;
+font-size: 1.1em !important;}
+
+tr {background-color: #eeeeee !important;}
+
+tr:nth-child(even) {background: #f9f9f9 !important;}
+tr:nth-child(odd) {background: #ffffff  !important;}
+
+
+#status .statusNormal {font-size: 1.2em !important; font-weight:bold !important;
+color: #b85533;}
+#status .statusInformation {font-size: 1.2em !important; font-weight:bold !important; color:#333333;}
+#status .statusError {font-size: 1.2em !important; font-weight:bold !important; color:#FF0000}
+
+span.statusNormal{
+font-size: 1.2em !important;
+color: #b85533;
+}
+
+/* ALERTS */
+.alertNone, .alertNone h4 {font-family: "Neutraface Text",sans-serif !important;font-size: 1.2em !important; color:#b85533 !important; font-weight:bold; line-height:normal;margin:0px;}
+.alertNone p, .featurebox h1, .featurebox h2, .featurebox h3, .featurebox h4, .featurebox h5, .featurebox h6 {font-family: "Neutraface Text",sans-serif !important;margin: 0 0 .3em;border-bottom: 1px solid #333399;color:#b85533; }
+.alertNone p {font-family: "Neutraface Text",sans-serif !important; border:none;font-size: 1.3em !important; color:#b85533 !important; font-weight:bold;}
+.alertNone a {font-family: "Neutraface Text",sans-serif !important; font-weight:bold}
+
+.alertSystem, .alertSystem h4 {font-family: "Neutraface Text",sans-serif !important; font-size: 1.2em !important; color:#0000ff !important; font-weight:bold;line-height:normal;margin:0px;}
+.alertSystem p, .featurebox h1, .featurebox h2, .featurebox h3, .featurebox h4, .featurebox h5, .featurebox h6 {font-family: "Neutraface Text",sans-serif !important; margin: 0 0 .3em;border-bottom: 1px solid #333399;color:#0000ff;}
+.alertSystem p {font-family: "Neutraface Text",sans-serif !important;border:none;font-size: 1.3em !important; color:#0000ff !important; font-weight:bold;}
+.alertSystem a {font-family: "Neutraface Text",sans-serif !important; font-weight:bold}
+
+.alertUser, .alertUser h4 {font-family: "Neutraface Text",sans-serif !important; font-size: 1.2em !important; color:#0000ff !important; font-weight:bold;line-height:normal;margin:0px;}
+.alertUser p, .featurebox h1, .featurebox h2, .featurebox h3, .featurebox h4, .featurebox h5, .featurebox h6 {font-family: "Neutraface Text",sans-serif !important; margin: 0 0 .3em;border-bottom: 1px solid #333399;color:#0000ff;}
+.alertUser p {font-family: "Neutraface Text",sans-serif !important; border:none;font-size: 1.3em !important; color:#0000ff !important; font-weight:bold;}
+.alertUser a {font-family: "Neutraface Text",sans-serif !important; font-weight:bold}
+
+.alertStatus,.alertStatus h4 {font-family: "Neutraface Text",sans-serif !important; font-size: 1.2em !important; color:#b85533 !important; font-weight:bold;line-height:normal;margin:0px;}
+.alertStatus p, .featurebox h1, .featurebox h2, .featurebox h3, .featurebox h4, .featurebox h5, .featurebox h6 {font-family: "Neutraface Text",sans-serif !important; margin: 0 0 .3em;border-bottom: 1px solid #333399;color:#b85533;}
+.alertStatus p {font-family: "Neutraface Text",sans-serif !important; border:none;font-size: 1.3em !important; color:#b85533 !important; font-weight:bold;}
+.alertStatus a {font-family: "Neutraface Text",sans-serif !important; font-weight:bold}
+
+.alertDeliveryLocation, .alertDeliveryLocation h4 {font-family: "Neutraface Text",sans-serif !important; font-size: 1.2em !important; color:#b85533 !important; font-weight:bold;line-height:normal;margin:0px;}
+.alertDeliveryLocation p, .featurebox h1, .featurebox h2, .featurebox h3, .featurebox h4, .featurebox h5, .featurebox h6 {font-family: "Neutraface Text",sans-serif !important; margin: 0 0 .3em;border-bottom: 1px solid #333399;color:#b85533;}
+.alertDeliveryLocation p {font-family: "Neutraface Text",sans-serif !important; border:font-size: 1.3em !important; color:#b85533 !important; font-weight:bold;}
+.alertDeliveryLocation a {font-family: "Neutraface Text",sans-serif !important; font-weight:bold}
+div.progressBar {
+ position:relative;
+ display:block;
+ width:200px;
+ height:25px;
+ text-align: center;
+ background:url(../bar.gif) no-repeat 0 0;
+}
+
+/* Amazon image -- controls the positioning of the cover image. */
+#AmazonImage {
+	float: right;
+	border: 1px solid;
+}
+
+
+
+/* Google left & right -- these are specific classes that float the Google Books buttons. DO NOT EDIT. */
+div.google_left {
+	float: left;
+	margin-right: 100px;
+}
+
+div.google_right {
+	width: auto;
+}
+
+/* Price field -- this formats the entries in the vendor price widget */
+div.price_field {
+	width: inherit;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+/* This formats an individual search result in the Find My Item widget */
+div.search_result {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+/* This is the link style for the "Prev 5" and "Next 5" links in the search results list */
+a.showToggle {
+	cursor: pointer;
+}
+
+
+
+/*----------------------------------------------------*/
+/* DATE PICKER STYLES */
+/*----------------------------------------------------*/
+
+/* the div that holds the date picker calendar */
+div#datepicker .dpDiv {
+font-family: "Neutraface Text",sans-serif;
+	font-size: 12px;
+text-align: center;
+	background: #f2f5f7 !important;
+	border: 1px solid #aed0ea;
+border-radius: 8px !important;
+   background:  #d7ebf9;
+	}
+ 
+ 
+/* the table (within the div) that holds the date picker calendar */
+div#datepicker.dpDivtable.dpTable {
+	font-family: "Neutraface Text",sans-serif;
+/*	font-size: 12px;*/
+	text-align: center;
+	background: #f2f5f7 !important;
+	border: 1px solid #aed0ea;
+border-radius: 8px !important;
+   background:  #d7ebf9;
+    filter: Alpha(Opacity=30);
+    border-radius: 8px;
+	}
+ 
+table .dpTable{
+border-radius: 8px !important;	
+}	
+ 
+/* a table row that holds date numbers (either blank or 1-31) */
+.dpTR {
+	background: #f2f5f7 !important;
+	}
+ 
+ 
+/* the top table row that holds the month, year, and forward/backward buttons */
+ tr .dpTitleTR {
+ font-size: 14px;
+	background:  #d7ebf9 !important;
+	font-weight:bold !important;
+	}
+ 
+ 
+/* the second table row, that holds the names of days of the week (Mo, Tu, We, etc.) */
+.dpDayTR {
+	background: #f2f5f7 !important;
+	}
+ 
+ 
+/* the bottom table row, that has the "This Month" and "Close" buttons */
+.dpTodayButtonTR {
+	background: #f2f5f7 !important;
+	}
+ 
+ 
+/* a table cell that holds a date number (either blank or 1-31) */
+.dpTD {
+	border: 1px solid #aabbcc;
+	background: #f2f5f7 !important;
+	}
+ 
+ /* a table cell that grays out past days */
+ .dpTDpast {
+	border: 1px solid #aabbcc;
+	background: #dddddd !important;
+	color: #aca998;
+	}
+	
+/* a table cell that holds a highlighted day (usually either today's date or the current date field value) */
+.dpDayHighlightTD {
+	background-color: #ffffea;
+	color: #b85533 !important;
+	border: 1px solid #AAAAAA;
+	}
+ 
+ 
+/* the date number table cell that the mouse pointer is currently over (you can use contrasting colors to make it apparent which cell is being hovered over) */
+.dpTDHover {
+	background-color: #ffffff;
+	border: 1px solid #888888;
+	cursor: pointer;
+	color: red;
+	}
+ 
+ 
+/* the table cell that holds the name of the month and the year */
+.dpTitleTD {
+	background: #d7ebf9 !important;
+font-weight:bold !important;
+	}
+ 
+ 
+/* a table cell that holds one of the forward/backward buttons */
+.dpButtonTD {
+	background:  #d7ebf9 !important;
+		font-size: 14px;
+	font-weight:bold !important;
+/*	color: black;*/
+	}
+ 
+ 
+/* the table cell that holds the "This Month" or "Close" button at the bottom */
+.dpTodayButtonTD {
+	background:  #d7ebf9 !important;
+			font-size: 14px;
+	font-weight:bold !important;
+	}
+ 
+ 
+/* a table cell that holds the names of days of the week (Mo, Tu, We, etc.) */
+.dpDayTD {
+	background-color:#345290;
+	border: 1px solid #aabbcc;
+	color: white;
+	}
+ 
+ 
+/* additional style information for the text that indicates the month and year */
+.dpTitleText {
+	font-size: 18px;
+	font-weight:bold !important;
+	color: black;
+/*		background:  #d7ebf9 !important;*/
+	}
+ 
+ 
+/* additional style information for the cell that holds a highlighted day (usually either today's date or the current date field value) */ 
+.dpDayHighlight {
+	color: 4060ff;
+	font-weight: bold;
+	}
+ 
+ 
+/* the forward/backward buttons at the top */
+.dpButton {
+/*	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;*/
+	font-family: "Neutraface Text",sans-serif;
+	font-size: 14px;
+	color: black;
+/*	background: #ece9d8;*/
+	font-weight: bold;
+	padding: 0px;
+	background-color:#ffffea !important;
+	}
+ 
+ 
+/* the "This Month" and "Close" buttons at the bottom */
+.dpTodayButton {/*
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 10px;*/
+		font-family: "Neutraface Text",sans-serif;
+	color: black;
+/*	background: #ece9d8;*/
+	font-weight: bold;
+background-color:#ffffea !important;
+	}
+	
+/**** Buttons, submit, input, textareas ***/	
+#rightSideContent button, html input[type="button"], input[type="reset"], input[type="submit"]
+{
+padding:5px !important;
+font-size: 0.9em;
+ font-weight:bold !important;
+}
+
+#rightSideContent input[type="text"], input[type="password"],input, textarea
+{
+padding:6px !important;
+}
+
+#rightSideContent select
+{
+padding:4px 5px 4px 5px !important;
+}	
+	
+
+ 
+ul#nav{
+margin: 10px 0px 0px 12px !important;
+padding:0px !important; 
+ }
+ 
+ul#nav ul{
+margin: 0px;
+padding:0px;
+}
+
+ul#nav li, ul#nav li .active{
+margin: 5px 0px 5px 0px;
+padding: 0px;
+list-style: none;
+}
+
+
+ul#nav li ul, ul#nav li .active ul{
+margin-left: 10px;
+padding: 0px;
+}
+
+#logonform a:link,#logonform a:visited{
+color:#0f51d9 !important;
+}
+
+#logonform a:hover{
+color: #86C1EA !important;
+}
+
+
+/*This is for the priority indicator tooltip for purchase requests*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #003087;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px 0 10px;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.NLMDDSRequest {margin-bottom:20px}
+
+.validationError {font-weight:bold; color:#FF0000}
+
+.urlPDF{background-image: url(http://216.54.57.145/illiad/images/pdficon.gif);background-repeat: no-repeat;background-position: 0 50%;padding: 3px 0 3px 20px;margin: .4em 0;}
+
+
+/**************** FORM AND FIELDSET STYLING  ****************/
+
+
+#rightSideContent fieldset, fieldset
+
+{ 
+border: 1px solid  #cccccc;
+border-radius: 8px;
+margin:  5px;
+padding: 15px 15px 10px 15px;
+/*		background-color: #f8f8f3;*/
+background-color: #fffcf6; 
+}
+
+#rightSideContent fieldset legend, fieldset legend
+{ 
+/*font-family: "Neutraface Headings";*/
+font-size:2em;
+font-weight:normal !important;
+padding:0px 3px;
+color: #345290;
+/*color:#b87733;*/
+	line-height:normal;
+}
+
+
+
+#rightSideContent label, label
+{
+
+float: left;
+  text-align: left;
+   margin:5px 10px 0px 0px;
+}
+
+
+#rightSideContent input[type="text"], input[type="password"], button, input, select, textarea
+{
+
+  border-radius: 4px;
+  padding: 4px; 
+  border: 1px solid #dddddd;
+  margin-bottom: 15px;
+}
+
+.dropdown select, select {
+	padding-left: 5px;
+	font-size: 0.9em !important;
+}
+
+.dropdown select option, select option, option {
+	padding-left: 5px;
+	font-size: 1.1em !important;
+}
+
+#rightSideContent button, html input[type="button"], input[type="reset"], input[type="submit"]
+{
+  border-radius: 4px;
+  padding: 4px; 
+  border: 1px solid #dddddd;
+  margin-bottom: 15px;
+line-height: inherit;
+  cursor: pointer;
+  color: #0f51d9;
+  font-size: 1em;
+  font-weight:700;
+    background-color: #f1f8fc;
+}
+
+#rightSideContent input[type="radio"], rightSideContent .radio input[type="radio"] label,
+.radio input[type="radio"] label
+{
+margin: 7px 5px 0 15px;
+padding:0px;
+float:left;
+text-align: left;
+border:none !important;
+
+}
+
+
+
+
+.radiobutton{
+	width: 100%;
+}
+
+.radiobutton2{
+	width: 100%;
+}
+
+#rightSideContent table, #rightSideContent td{
+border:none !important;
+/*background-color:#ffffea !important;*/
+}
+
+
+
+#rightSideContent .radio .icon label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+ 
+}
+
+#rightSideContent .required{ 
+color: #b22222;
+font-weight:bold !important;
+}
+
+
+.close-window-reset {
+
+border:1px solid #dddddd;
+border-radius: 4px;
+padding: 4px;
+background-color:#f1f8fc;
+}
+
+
+.link-button-background {
+
+border:1px solid #dddddd;
+border-radius: 4px;
+padding: 6px;
+background-color:#f1f8fc;
+margin-bottom: 10px;
+}
+
+
+@media(max-width: 1099px) {
+.link-button-background  {
+margin:10px;
+float:left;
+clear:both;
+  }
+}
+
+
+.highlight-text-background {
+border:1px solid #dddddd;
+border-radius: 4px;
+padding: 6px;
+background-color:#f1f8fc;
+width: 50%;
+}
+
+
+@media(max-width: 940px) {
+.highlight-text-background {
+margin:10px;
+float:left;
+clear:both;
+  }
+}
+
+.highlight-text-yellow-background {
+border:1px solid #dddddd;
+border-radius: 4px;
+padding: 6px;
+background-color:#f8f8f3;
+/*width: 50%;*/
+}
+
+
+@media(max-width: 940px) {
+.highlight-text-yellow-background {
+margin:10px;
+float:left;
+clear:both;
+  }
+}
+
+
+
+/********************* Left 50% ***************/
+
+.left-50-percent {
+float:left;
+width: 50%;	
+}
+
+.left-50-percent fieldset{
+ 	height:290px;
+ 	padding-bottom:1em;
+ } 
+ 
+ 
+/****** Left 50% Mobile styles ******/
+
+@media(max-width: 999px) {
+
+.left-50-percent {
+float:left;
+width:100%;
+  }
+.left-50-percent fieldset{
+ 	min-height:320px;
+ 	padding-bottom:1em;
+ } 
+}
+
+@media(max-width: 479px) {
+
+.left-50-percent {
+float:left;
+width:100%;
+  }
+.left-50-percent fieldset{
+ 	min-height:450px;
+ 	padding-bottom:1em;
+ } 
+}
+/****** End Left 50% Mobile styles ******/
+
+
+/******************* Right 50% ********************/
+
+.right-50-percent {
+float:left;
+width: 50%;	
+
+}
+
+.right-50-percent fieldset{
+ 	height:290px;
+ 	 	padding-bottom:1em;
+ } 
+
+/****** Right 50% Mobile styles ******/ 
+ 
+@media(max-width: 999px) {
+
+.right-50-percent {
+margin:10px;
+float:left;
+width:100%;
+clear:left;
+  }
+.right-50-percent fieldset{
+ 	min-height:320px;
+ 	padding-bottom:1em;
+ } 
+   
+}
+
+@media(max-width: 479px) {
+
+.right-50-percent {
+margin:10px;
+float:left;
+width:100%;
+clear:left;
+  }
+.right-50-percent fieldset{
+ 	min-height:450px;
+ 	padding-bottom:1em;
+ } 
+   
+}
+
+/****** End Right 50% Mobile styles ******/ 
+
+
+/******************** Left 60% ************************/
+
+.left-60-percent {
+float:left;
+width: 60%;	
+}
+
+.left-60-percent fieldset{
+ 	height:240px;
+ 	padding-bottom:0.8em;
+ } 
+ 
+/****** Left 60% Mobile styles ******/ 
+
+@media(max-width: 1099px) {
+
+.left-60-percent {
+float:left;
+width:100%;
+  }
+.left-60-percent fieldset{
+  	min-height:340px;
+  	padding-bottom:1em;
+ } 
+}
+
+/****** End Left 60% Mobile styles ******/ 
+
+/************** Right 40% ****************/
+
+
+.right-40-percent {
+float:left;
+width: 40%;	
+ 	padding-bottom:0.8em;
+}
+
+
+.right-40-percent fieldset{
+ 	height:240px;
+ 	 	padding-bottom:1em;
+ } 
+
+ /****** Left 40% Mobile styles ******/ 
+ 
+@media(max-width: 1099px) {
+
+.left-60-percent fieldset{
+  	min-height:340px;
+  	 	padding-bottom:0.9em;
+ } 
+
+
+.right-40-percent {
+margin:10px 0px 0px 0px;
+float:left;
+width:100%;
+clear:left;
+  }
+.right-40-percent fieldset{
+  	min-height:340px;
+  	 	padding-bottom:0.9em;
+ } 
+   
+}
+ /****** End Left 40% Mobile styles ******/ 
+ 
+ 
+/***********************************************/ 
+
+/********** ILLIAD SPECIFIC FIELDSET STYLES ****/
+
+/*****************************************************************************************************/
+
+/** 25% no height limit; USED BY ILLIAD MENU**/
+.no-height-25-percent {
+float:left;
+width: 20%;
+margin:0px 5px 0px 0px;	
+}
+
+
+/*@media(max-width: 1151px) {
+.no-height-25-percent{
+float:left;
+width:25%;
+margin:0px 5px 10px 0px;
+}
+}*/
+
+@media(max-width: 951px) {
+.no-height-25-percent{
+float:left;
+width:20%;
+margin:0px 5px 10px 0px;
+}
+}
+
+@media(max-width: 660px) {
+.no-height-25-percent{
+float:left;
+width:100%;
+margin:0px 20px 10px 0px;
+}
+}
+
+/****** END 25% no height limit******/
+
+
+/**** 30% NO HEIGHT limit; USED BY ILLIAD LOGIN AND FRONT PAGE****/
+
+.no-height-30-percent {
+float:left;
+width: 30%;
+margin:0px 10px 0px 0px;	
+}
+
+.no-height-30-percent fieldset{
+ 	padding-bottom:1em;
+}
+
+.no-height-30-percent input[type="select"],.no-height-30-percent .dropdown select, .no-height-30-percent select {
+ 	width:80%;	
+}
+
+ /***30% NO HEIGHT limit Mobile styles ***/ 
+
+@media(max-width: 951px) {
+.no-height-30-percent{
+float:left;
+width:30%;
+margin:0px 10px 10px 0px;
+}
+.no-height-30-percent fieldset{
+ 	padding-bottom:1em;
+ 	}
+
+#rightSideContent input[type="text"], input[type="password"],input[type="select"],.dropdown select, select, textarea, 
+ #item_info [type="text"], input[type="password"],input[type="select"],select,.dropdown select, select, textarea
+ {
+ 	width:70%;
+ }	
+ 
+}
+/*************/
+
+@media(max-width: 660px) {
+.no-height-30-percent{
+float:left;
+width:100%;
+margin:0px 20px 10px 0px;
+}
+.no-height-30-percent fieldset{
+ 	min-height:300px;
+ 	padding-bottom:1em;
+ 	}
+ 	
+#rightSideContent input[type="text"], input[type="password"],select, textarea,
+#item_info input[type="text"], input[type="password"],select, textarea 
+ {
+ 	width:80%;
+ }		
+ 	
+}
+
+ /****** END 30% no height limit Mobile styles ******/ 
+
+
+
+
+/** 40% NO HEIGHT limit; USED BY ILLIAD LOGIN AND FRONT PAGE**/
+
+.no-height-40-percent {
+float:left;
+width: 40%;
+margin:0px 20px 0px 0px;	
+}
+
+.no-height-40-percent fieldset{
+ 	padding-bottom:1em;
+}
+ 
+
+ /****** 40% no height limit Mobile styles ******/ 
+
+@media(max-width: 951px) {
+.no-height-40-percent{
+float:left;
+width:40%;
+margin:0px 20px 10px 0px;
+}
+.no-height-40-percent fieldset{
+ 	padding-bottom:1em;
+ 	}
+
+#rightSideContent input[type="text"], input[type="password"],select, textarea, 
+ #item_info [type="text"], input[type="password"],select, textarea
+ {
+ 	width:70%;
+ }	
+ 
+}
+
+/*****/
+
+@media(max-width: 660px) {
+.no-height-40-percent{
+float:left;
+width:100%;
+margin:0px 20px 10px 0px;
+}
+.no-height-40-percent fieldset{
+ 	min-height:300px;
+ 	padding-bottom:1em;
+ 	}
+ 	
+#rightSideContent input[type="text"], input[type="password"],select, textarea,
+#item_info input[type="text"], input[type="password"],select, textarea 
+ {
+ 	width:80%;
+ }		
+ 	
+ 
+}
+
+ /****** END 40% no height limit Mobile styles ******/ 
+
+
+
+/***** 50% NO height limit; USED BY ILLIAD Main Menu page ****/
+
+.no-height-50-percent {
+float:left;
+width: 50%;
+margin:0px 0px 10px 0px;	
+}
+
+.no-height-50-percent fieldset{
+ 	padding-bottom:1em;
+ }
+ 
+ 
+.no-height-right-50-percent {
+float:right;
+width: 50%;
+margin:0px 0px 10px 0px;
+}
+
+.no-height-right-50-percent fieldset{
+ 	padding-bottom:1em;
+ }
+
+ 
+ /****** 50% no height limit Mobile styles ******/ 
+ 
+@media(max-width: 951px) {
+.no-height-50-percent{
+float:left;
+width:50%;
+margin:0px 0px 10px 0px;
+}
+
+.no-height-50-percent fieldset{
+	padding-bottom:1em;
+
+ } 
+ 
+ 
+ .no-height-right-50-percent {
+float:right;
+width: 50%;
+margin:0px 0px 10px 0px;
+}
+
+.no-height-right-50-percent fieldset{
+ 	padding-bottom:1em;
+ }
+ 
+ 
+}
+
+/*****************/
+@media(max-width: 660px) 
+{
+.no-height-50-percent{
+float:left;
+width:50%;
+margin:0px 0px 10px 0px;
+}
+
+.no-height-50-percent fieldset{
+	padding-bottom:1em;
+
+ } 
+ 
+ 
+ .no-height-right-50-percent {
+float:right;
+width: 50%;
+margin:0px 0px 10px 0px;
+}
+
+.no-height-right-50-percent fieldset{
+ 	padding-bottom:1em;
+ }
+ 
+ 
+}
+
+
+/********************/
+
+@media(max-width: 479px) 
+{
+.no-height-50-percent{
+float:left;
+width:100%;
+margin:0px 0px 10px 0px;
+}
+
+.no-height-50-percent fieldset{
+ 	min-height:450px;
+ 	padding-bottom:1em;
+ }
+ 
+  .no-height-right-50-percent {
+float:left;
+width:100%;
+margin:0px 0px 10px 0px;
+}
+
+.no-height-right-50-percent fieldset{
+ 	min-height:450px;
+ 	padding-bottom:1em;
+ }
+ 
+  
+}
+
+
+ /****** END 50% no height limit Mobile styles ******/ 
+
+
+/**** 60% NO height limit;  USED BY ILLIAD  ****/
+/*used by Lending/LendingFirstTime  and  IDS ChangeUserInformation (Account Settings) */
+.no-height-60-percent {
+float:left;
+width: 60%;	
+margin:0px 0px 10px 0px;
+}
+
+.no-height-60-percent fieldset{
+ 	padding-bottom:1em;
+ } 
+ 
+ /****** 60% no height limit Mobile styles ******/  
+
+@media(max-width: 951px) {
+
+.no-height-60-percent {
+float:left;
+width:60%;
+margin:0px;
+}
+
+.no-height-60-percent fieldset{
+padding-bottom:1em;
+ } 
+
+}
+ 
+/*****/ 
+ @media(max-width: 660px) {
+
+.no-height-60-percent {
+float:left;
+width:100%;
+margin:0px 10px 10px 0px;
+}
+
+.no-height-60-percent fieldset{
+padding-bottom:1em;
+ } 
+}
+
+/******/
+
+@media(max-width: 479px) {
+
+.no-height-60-percent {
+float:left;
+width:100%;
+margin:0px 0px 10px 0px;
+ }
+ 
+.no-height-60-percent fieldset{
+padding-bottom:1em;
+ } 
+ 
+}
+ 
+ /****** END 60% no height limit Mobile styles ******/  
+
+
+
+
+
+ 
+ /******************************************/
+ 
+ 
+
+ /** FAQs float right - embedded LibApps FAQs Widget on IDS home page and ILLiad Lending home page **/ 
+ 
+ .faqs-right-35-percent {
+float:right;
+width: 35%;
+margin:0px 20px 0px 0px;	
+}
+
+.faqs-right-35-percent fieldset{
+ 	padding-bottom:1em;
+}
+
+ /****** faqs-right-35-percent limit Mobile styles ******/  
+
+@media(max-width: 951px) {
+.faqs-right-35-percent{
+float:right;
+width:35%;
+margin:0px 10px 10px 0px;
+}
+.faqs-right-35-percent fieldset{
+ 	padding-bottom:1em;
+ 	}
+ 
+}
+/*********/
+
+@media(max-width: 660px) {
+.faqs-right-35-percent{
+float:left;
+width:100%;
+margin:0px 10px 10px 0px;
+}
+.faqs-right-35-percent fieldset{
+ 	min-height:300px;
+ 	padding-bottom:1em;
+ 	}
+ 
+}
+ /****** END faqs-right-35-percent limit Mobile styles ******/   
+ 
+ 
+ /**********************************************/
+
+/*no-height-right-60% used by IDS Notifications and Notifaction History, and ILLiad/Lending tables and forms */
+
+.no-height-right-60-percent {
+float:right;
+width:78%;
+margin:0px 5px 10px 0px;
+}
+
+.no-height-right-60-percent fieldset{
+ 	padding-bottom:1em;
+ }
+ 
+ #rightSideContent input[type="text"], input[type="password"], textarea, 
+ #item_info [type="text"], input[type="password"],textarea
+ {
+ 	width:80%;
+ }
+
+  .dropdown select {
+ 	width:30%;
+ }
+
+
+ /****** no-height-right-60-percent limit Mobile styles ******/  
+
+@media(max-width: 1151px) {
+
+.no-height-right-60-percent {
+float:right;
+width: 75%;
+margin:0px 5px 0px 10px;
+}
+
+.no-height-right-60-percent fieldset{
+ 	padding-bottom:1em;
+ }
+ 
+ #rightSideContent input[type="text"], input[type="password"], textarea, 
+ #item_info [type="text"], input[type="password"],textarea
+ {
+ 	width:80%;
+ }
+
+  .dropdown select {
+ 	width:40%;
+ }
+
+}
+
+
+/******************/
+
+@media(max-width: 951px) {
+
+.no-height-right-60-percent {
+float:right;
+width: 70%;
+margin:0px 5px 0px 20px;
+}
+
+.no-height-right-60-percent fieldset{
+ 	padding-bottom:1em;
+ }
+ 
+ #rightSideContent input[type="text"], input[type="password"], textarea, 
+ #item_info [type="text"], input[type="password"],textarea
+ {
+ 	width:80%;
+ }
+
+  .dropdown select {
+ 	width:40%;
+ }
+
+}
+
+
+/******************/
+
+
+@media(max-width: 660px) {
+
+.no-height-right-60-percent {
+float:left;
+width:100%;
+margin:0px 10px 10px 0px;
+}
+.no-height-right-60-percent fieldset{
+padding-bottom:1em;
+ } 
+
+ #rightSideContent input[type="text"], input[type="password"], textarea, 
+ #item_info [type="text"], input[type="password"],textarea
+ {
+ 	width:80%;
+ }
+
+  .dropdown select {
+ 	width:40%;
+ }
+ 
+}
+
+/*********/
+
+@media(max-width: 479px) {
+
+.no-height-right-60-percent {
+float:left;
+width:100%;
+margin:0px 10px 10px 0px;
+}
+.no-height-right-60-percent fieldset{
+padding-bottom:1em;
+ } 
+ 
+ #rightSideContent input[type="text"], input[type="password"], textarea, 
+ #item_info [type="text"], input[type="password"],textarea
+ {
+ 	width:80%;
+ }
+
+  .dropdown select {
+ 	width:50%;
+ }
+}
+
+
+
+
+.100-percent
+	input[type="text"], input[type="password"], textarea, 
+ #item_info [type="text"], input[type="password"],textarea
+{
+float:right;
+width: 60% !important;
+
+}
+
+ /****** END no-height-right-60-percent limit Mobile styles ******/  
+ 
+ 
+ 
+
+/**************** END FORM AND FIELDSET STYLING  ****************/
+	
+	
