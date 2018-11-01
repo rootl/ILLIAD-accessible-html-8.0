@@ -1,0 +1,118 @@
+<html>
+<#INCLUDE filename="includes/drupalheader_responsive.inc">
+<head>
+<title>Information Delivery Services | Milne Library</title>
+<link rel="stylesheet" type="text/css" href="styles/GIST4Web.css">		
+</head>
+<body>
+<script type="text/javascript" src="js/userNotificationPreferences.js"></script>
+
+<!-- <h1>Information Delivery Services (IDS)</h1> -->
+<h1>Account Settings</h1>
+<!-- <div style="margin-bottom:30px;"> -->
+
+
+<#INCLUDE filename="includes/include_menu_you_are_logged_in_as.html">
+
+<div><p>Please note that the information below is used solely for contacting you about your requests.</p>
+<p>* denotes a required field.</p></div>
+		<form action="illiad.dll" method="post" name="ChangeUserInformation">
+			<input type="hidden" name="ILLiadForm" value="ChangeUserInformation">
+			<input type="hidden" id="NotifyGroup" name="NotifyGroup" value="E-Mail">
+			<input type="hidden" id="DeliveryGroup" name="DeliveryGroup" value="<#PARAM name="DeliveryGroup">">
+			<input type="hidden" id="WebDeliveryGroup" name="WebDeliveryGroup" value="<#PARAM name="WebDeliveryGroup">">
+			<input type="hidden" id="LoanDeliveryGroup" name="LoanDeliveryGroup" value="<#PARAM name="LoanDeliveryGroup">">
+			
+			<input type="hidden" id="NVTGC" name="NVTGC" size="1" value="ILL">
+			
+			
+			
+<div class="no-height-30-percent">
+<fieldset id="Personal-Information">
+<legend>Personal Information</legend>			
+				
+					<div class="field_label">* First Name</div>
+					<div class="field"><input id="FirstName" name="FirstName" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="FirstName">"></div>
+						
+					<div class="field_label">* Last Name</div>
+					<div class="field"><input id="LastName" name="LastName" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="LastName">"></div>						
+
+					<div class="field_label">* Email Address</div>
+					<div class="field"><input id="EMailAddress" name="EMailAddress" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="EMailAddress">"></div>
+					
+					<div class="field_label">* Phone Number</div>
+					<div class="field"><input id="Phone" name="Phone" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Phone">"></div>
+
+					<div class="field_label">* Status</div>
+					<div class="field"><select id="StatusGroup" name="StatusGroup" size="1" class="f-name" tabindex="4">
+							<option selected><#PARAM name="StatusGroup"></option>
+							<option>Graduate</option>
+							<option>Faculty</option>
+							<option>Staff</option>
+							<option>Undergraduate</option>
+							<option>Guest</option>
+					</select></div>
+					
+					<div class="field_label">* Department</div>
+					<div class="field"><select id="Department" name="Department" size="1" class="f-name" tabindex="4">
+							<option selected><#PARAM name="Department"></option>
+							<option value="Administration">Administration</option>
+							<option value="Anthropology">Anthropology</option>
+							<option value="Art">Art</option>
+							<option value="Biology">Biology</option>
+							<option value="Business">Business</option>
+							<option value="Communicative Disorders & Sciences, Speech Pathology">Communicative Disorders & Sciences, Speech Pathology</option>
+							<option value="Chemistry (Biochemistry)">Chemistry (Biochemistry)</option>
+							<option value="CIT">Computing and Media (Includes CIT)</option>
+							<option value="Communication & Speech Communication">Communication & Speech Communication</option>
+							<option value="Computer Science">Computer Science</option>
+							<option value="Education">Education</option>
+							<option value="English">English</option>
+							<option value="Foreign Languages">Foreign Languages</option>
+							<option value="Geography">Geography</option>
+							<option value="Geology">Geology</option>
+							<option value="History">History</option>
+							<option value="HPE">HPE</option>
+							<option value="Library">Library</option>
+							<option value="Math">Math</option>
+							<option value="Performing Arts, Drama and Music">Performing Arts, Drama and Music</option>
+							<option value="Philosophy">Philosophy</option>
+							<option value="Physics">Physics</option>
+							<option value="Political Science (Includes International Relations)">Political Science (Includes International Relations)</option>
+							<option value="Psychology">Psychology</option>
+							<option value="Sociology">Sociology</option>
+							<option value="Undecided">Undecided</option>
+            			</select></div>
+
+					<div class="field_label">People authorized to pick up materials on your behalf (full name).</div>
+					<div class="field"><textarea id="AuthorizedUsers" name="AuthorizedUsers" rows="2" cols="40" class="f-name" tabindex="15"><#PARAM name="AuthorizedUsers"></textarea></div>							
+</fieldset>
+</div>
+
+
+
+
+<div class="no-height-60-percent">
+<fieldset id="Notification-Preferences">
+<legend>Notification Preferences</legend>					
+<div style="margin-bottom: 20px;">				       
+					<#include filename="includes/include_notification_preferences.html">
+</div>
+<div style="float:left;margin-top:20px;">
+<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit" tabindex="60" />
+						
+<input type="submit" name="SubmitButton" value="Cancel - Exit to Main Menu" class="f-submit" tabindex="62" />
+</div>				
+				
+</fieldset>	
+</div>
+
+	</form>
+	
+	
+	
+	
+<#INCLUDE filename="includes/drupalfooter_responsive.inc">
+
+</body>
+</html>

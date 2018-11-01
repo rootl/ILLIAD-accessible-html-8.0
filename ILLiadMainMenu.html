@@ -1,0 +1,42 @@
+<html>
+<#INCLUDE filename="includes/drupalheader_responsive.inc">
+<head>
+<title>Information Delivery Services | </title>
+<link rel="stylesheet" type="text/css" href="styles/GIST4Web.css">		
+</head>
+<body>
+
+	<h1>IDS Main Menu</h1>
+	
+	<p class="subheading"><b>Need a book, media item, or journal article? Request it through IDS and we'll deliver it to you.</b></p>
+
+<!--div>
+	<h3>You are signed in as <#PARAM name="Username"></h3> 
+	<ul>
+		<li><a href="<#ACTION action="10" form="81">">Account Settings</a></li>
+		<li><a href="#acct_notifications">Recent Account Notifications</a></li>
+		<li><a href="<#ACTION action="99">">Logout</a></li>
+	</ul>
+</div-->
+<#INCLUDE filename="includes/include_menu_you_are_logged_in_as.html">
+	<!--p><!--<#STATUS></p -->
+<#INCLUDE filename="includes/include_menu.html">
+<a name="acct_notifications"></a>
+<h2>Recent Account Notifications</h2>
+<div id="notifications">
+	<div style="padding:0px"><#TABLE name="ViewNotifications" noDataAction="ShowMessageRow" noDataMessage="No Notifications" maxrows="5"></div>
+	<div style="padding:10px 0px;"><a href="<#ACTION action="10" form="73">">View all notifications...</a></div>
+	<!--<div><img src="/images/RSS_Small.png"> <a href="<#ACTION action="2" type="41" value="RSSID" valueType="lookup" includeSessionID="false">">Subscribe to your notifications feed.</a></div>-->
+</div>
+	
+	<div id="announcements" style="border-top:2px solid #ddd; padding:10px 0px;"><#INCLUDE filename="includes/announcements.inc"></div>	
+
+
+<#INCLUDE filename="includes/drupalfooter_responsive.inc">
+  </body>
+
+
+</html>	
+
+
+

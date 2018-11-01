@@ -1,0 +1,106 @@
+<html>
+<#INCLUDE filename="includes/drupalheader_responsive.inc">
+<head>
+<title>Information Delivery Services | </title>
+<link rel="stylesheet" type="text/css" href="styles/GIST4Web.css">		
+</head>
+<body>
+<script type="text/javascript" src="js/userNotificationPreferences.js"></script>
+
+<h1>New User Registration</h1>
+<!--div>
+	<h3>You are signed in as <#PARAM name="Username"></h3> 
+	<ul>
+		<li><a href="<#ACTION action="10" form="81">">Account Settings</a></li>
+		<li><a href="#acct_notifications">Recent Account Notifications</a></li>
+		<li><a href="<#ACTION action="99">">Logout</a></li>
+	</ul>
+</div-->
+<#INCLUDE filename="includes/include_menu_you_are_logged_in_as.html">
+<h3><#STATUS></h3>
+<div>Please note that the information below is used solely for contacting you about your requests.</div>
+<div>* denotes a required field.</div>
+		<form action="illiad.dll" method="post" name="Registration">
+			<input type="hidden" name="ILLiadForm" value="Registration">
+			<input type="hidden" id="DeliveryGroup" name="DeliveryGroup" value="Hold for Pickup">
+			<input type="hidden" id="WebDeliveryGroup" name="WebDeliveryGroup" value="Yes">
+			<input type="hidden" id="LoanDeliveryGroup" name="LoanDeliveryGroup" value="Hold for Pickup">
+			<input type="hidden" id="NVTGC" name="NVTGC" size="1" value="ILL">
+
+					<h3>Personal Information</h3>					
+					<div class="field_label">* First Name</div>
+					<div class="field"><input id="FirstName" name="FirstName" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="FirstName">"></div>
+						
+					<div class="field_label">* Last Name</div>
+					<div class="field"><input id="LastName" name="LastName" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="LastName">"></div>						
+					
+					<input type="hidden" id="NotifyGroup" name="NotifyGroup" value="E-Mail">
+
+					<div class="field_label">* Email Address</div>
+					<div class="field"><input id="EMailAddress" name="EMailAddress" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="EMailAddress">"></div>
+					
+					<div class="field_label">* Phone Number</div>
+					<div class="field"><input id="Phone" name="Phone" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Phone">"></div>				
+					
+					<div class="field_label">* Status</div>
+					<div class="field"><select id="StatusGroup" name="StatusGroup" size="1" class="f-name" tabindex="4">
+							<option selected><#PARAM name="StatusGroup"></option>
+							<option>Graduate</option>
+							<option>Faculty</option>
+							<option>Staff</option>
+							<option>Undergraduate</option>
+							<option>Guest</option>
+					</select></div>
+					
+					<div class="field_label">* Department</div>
+					<div class="field"><select id="Department" name="Department" size="1" class="f-name" tabindex="4">
+							<option selected><#PARAM name="Department"></option>
+							
+							<option value="Anthropology">Anthropology</option>
+							<option value="Art History">Art History</option>
+							<option value="Biology">Biology</option>
+							<option value="Business">Business</option>
+							<option value="Chemistry">Chemistry</option>
+							<option value="Communication">Communication</option>
+							<option value="Education">Education</option>
+							<option value="English">English</option>
+							<option value="Languages and Literature">Languages and Literature</option>
+							<option value="Geography">Geography</option>
+							<option value="Geological Sciences">Geological Sciences</option>
+							<option value="History">History</option>
+							<option value="Library">Library</option>
+							<option value="Math">Math</option>
+							<option value="Music">Music</option>
+							<option value="Philosophy">Philosophy</option>
+							<option value="Physics and Astronomy">Physics and Astronomy</option>
+							<option value="Political Science and International Relations">Political Science and International Relations</option>
+							<option value="Psychology">Psychology</option>
+							<option value="Sociology">Sociology</option>
+							<option value="Theater and Dance">Theater and Dance</option>
+							<option value="Other Dept (Faculty and Staff)">Other Dept (Faculty and Staff)</option>
+							<option value="Undecided">Undecided</option>
+            			</select></div>
+
+					<div class="field_label">People authorized to pick up materials on your behalf (full name).</div>
+					<div class="field"><textarea id="AuthorizedUsers" name="AuthorizedUsers" rows="2" cols="40" class="f-name" tabindex="15"><#PARAM name="AuthorizedUsers"></textarea></div>
+					
+					<h3>IDS billing policy</h3>
+						<div>
+							<div>Items borrowed through Milne Library's Information Delivery Services (IDS) must be returned to Milne Library before the due date assigned by the lending institution. It is the patron's responsibility to monitor the due dates of outstanding IDS loans and to place timely renewal requests as needed. The extension of due dates are at the full discretion of the lending institutions and all items are subject to be recalled at any time. Patrons will be notified via email when items are due or if they have been recalled. Failure to return an item within 32 days of its due date will result in a $60 replacement charge plus a $10 non-refundable billing fee. Replacement charges can only be waived if the item is returned in good condition and Milne Library has not yet reimbursed the lending institution.</div>
+							<div>It is also the patron's responsibility to return items borrowed through IDS in the condition in which they were received. At the discretion of the lending institution, patrons who return an item with additional markings or damage will be subject to a $60 replacement charge plus a $10 non-refundable billing fee.</div>
+							<div>All charges will be recorded on a patron's student account, which may delay class registration, transcript requests, and the receipt of grade reports & diplomas. </div>
+						</div>
+					<div>
+					
+					<#include filename="includes/include_notification_preferences.html"><br />
+					
+						<div>By submitting this form, you are agreeing to the terms of our IDS billing policy.</div>
+						<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit" tabindex="60" />
+						<input type="submit" name="SubmitButton" value="Cancel - Exit to Main Menu" class="f-submit" tabindex="62" />
+					</div>
+		<#FORMSTATE>
+		</form>		
+<#INCLUDE filename="includes/drupalfooter_responsive.inc">
+
+</body>
+</html>

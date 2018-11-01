@@ -1,0 +1,33 @@
+<html>
+<#INCLUDE filename="includes/drupalheader_responsive.inc">
+<head>
+<title>Information Delivery Services | Milne Library</title>
+<link rel="stylesheet" type="text/css" href="styles/GIST4Web.css">		
+</head>
+<body>
+
+<!-- <h1>Information Delivery Services (IDS)</h1> -->
+<h1>Undelete Electronic Delivery</h1>
+<div style="margin-bottom:30px;">
+<!--div>
+	<h3>You are signed in as <#PARAM name="Username"></h3> 
+	<ul>
+		<li><a href="<#ACTION action="10" form="81">">Account Settings</a></li>
+		<li><a href="#acct_notifications">Recent Account Notifications</a></li>
+		<li><a href="<#ACTION action="99">">Logout</a></li>
+	</ul>
+</div-->
+<#INCLUDE filename="includes/include_menu_you_are_logged_in_as.html">
+</div>
+<div style="clear:both;"</div>
+		<p>In the event that you accidentally deleted an article and it no longer appears here, e-mail us at <a href="mailto:ids@geneseo.edu">ids@geneseo.edu</a>.</p>
+	
+		<div class="default-table">
+			<#TABLE name="ElectronicDeliveryUndelete" headerText="Deleted Electronically Received Articles"><br />
+		</div>
+								
+
+<#INCLUDE filename="includes/drupalfooter_responsive.inc">
+
+</body>
+</html>

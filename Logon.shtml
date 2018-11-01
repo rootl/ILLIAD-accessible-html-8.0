@@ -1,0 +1,103 @@
+<!DOCTYPE html lang="en">
+<!--#INCLUDE filename="includes/drupalheader_responsive.inc"-->
+<html>
+<head>
+<title>Information Delivery Services | </title>
+<link rel="stylesheet" type="text/css" href="styles/GIST4Web.css">		
+</head>
+<body>
+
+	<h1>Information Delivery Services (IDS)</h1>
+	<p class="subheading"><b>Need a book, media item, or journal article? Request it through IDS and we'll deliver it to you.</b></p>
+	<!--<#STATUS>-->
+	<div id="main_menu_table" style="margin-bottom:20px;">
+	
+		<!--div id="place_request"><h3><font color= "red">IDS is currently unavailable due to server upgrade. The server is expected to be back online by Jan. 14th @4pm. Sorry for the inconvenience.</font></h4-->
+			
+		<div class="no-height-40-percent">
+			<fieldset id="place_request">
+			
+			<legend>Sign into Your IDS Account</legend>
+			<form action="illiad.dll" method="post" name="Logon" style="padding:0px; margin:0px;">
+						<input type="hidden" name="ILLiadForm" value="Logon">
+						
+				<p>Username <input id="username" name="Username" size="45" type="text" style="margin:0px 0px 0px 5px;" title="Username" /></p>
+				<p>Password <input id="password" name="Password" size="45" type="password"  style="margin: 0px 0px 10px 12px;" title="Password" /></p>
+				<input type="submit" name="SubmitButton" value="Logon" tabindex="3" />&nbsp; | &nbsp;
+				Or use <a href="https://my.geneseo.edu/UniversitySSO/index.jsp?ssoToService=ILLiad">Geneseo Single Sign On.</a>
+				<input type="hidden" name="ILLiadForm" value="Logon" style="padding:0px; margin:0px;">
+			</form>		
+						
+			</fieldset>
+		</div>
+		
+		<div class="no-height-40-percent">
+			<fieldset id="access_account" style="padding-right:5px;">
+			<legend>Access your IDS Account to...</legend>
+			<ul style="margin-top:0px !important; padding-top:0px !important;">
+			<li>Place a new request</li>
+			<li>Check the status of a request</li>
+			<li>Renew your IDS materials</li>
+			<li>Download delivered articles</li>
+			<li>Update your contact information</li>
+			<li>And more...</li>
+			</ul>
+			
+			</fieldset>
+		</div>
+		
+<div style="clear:both; margin:0px !important; padding:0px !important;">&nbsp;</div>
+		
+	<div class="no-height-40-percent">
+	
+			<fieldset id="faqs" style="min-height:450px !important;padding-bottom:2em !important;">	
+				<legend>Frequently Asked Questions</legend>
+		<script src="//api2.libanswers.com/1.0/widgets/761"></script>
+		<div id="s-la-widget-761" style="width:100%; margin-left:-25px !important;padding:0 !important;"></div>	
+		</fieldset>
+	</div>
+
+	
+<!-- 	<div id="faqs" class="left-60-percent">
+		<script src="//api2.libanswers.com/1.0/widgets/761"></script>
+		<div id="s-la-widget-761" style="width:90%;"></div>
+	</div>	 -->		
+		
+
+
+	<!-- <div style="clear:both; margin:0px !important; padding:0px !important;">&nbsp;</div> -->
+
+<!-- 	<div id="faqs" style="float:left;width:60%;"> -->
+
+	
+	<!-- <div style="border-top:2px solid #ddd;"> -->
+	<!--hr/-->
+<!-- 	<div style="float:left; margin-top:28px; width:40%;"> -->
+ 	<div class="no-height-40-percent">
+	<fieldset id="resources-other-libraries">
+	<legend>Resources for other libraries</legend>
+	<ul style="margin-top:0px !important; padding-top:0px !important;">
+		<li style="margin-bottom:10px;">OCLC WorldShare Libraries: our holdings are listed under symbol YGM</li>
+		<li style="margin-bottom:10px;">All other libraries: please use our <a href="https://illiad.geneseo.edu/lending/lendinglogon.html">online lending request form</a></li>
+	</ul>
+	</fieldset>
+	</div>
+	<div style="clear:both;">&nbsp;</div>
+	</div>
+	
+
+
+<!--#INCLUDE filename="includes/drupalfooter_responsive.inc"-->
+  </body>
+
+
+
+</html>	
+	
+	
+	
+	
+	
+	
+	
+	
