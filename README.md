@@ -8,8 +8,8 @@ You should be able to rename these files as test or set up a test ILLiAD directo
 If you want to replace your web files completely with the ones in this repository, you must also add these directories (or add these files to the directories if they already exist:
 
 \styles\
-  Gist4Web.css (required)
-    \fonts subdirectory (not required but useful)
+Gist4Web.css (required)
+  \fonts subdirectory (not required but useful)
 
 \includes\
   drupalheader_responsive.inc 
