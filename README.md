@@ -5,7 +5,7 @@ Remember to back up all your existing web files .
 
 You should be able to rename these files as test or set up a test ILLiAD directory where you can preview look and feel of the pages before you replace them on your live site.
 
-If you want to replace your web files completely with the ones in this repository, you must also add these directories (or add these files to the directories if they already exist:
+If you want to replace your web files completely with the ones in this repository, you must also add these directories (or add these files to the directories if they already exist):
 
     \styles\
       Gist4Web.css (required) 
