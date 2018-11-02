@@ -9,17 +9,25 @@ If you want to replace your web files completely with the ones in this repositor
 
 \styles\
 Gist4Web.css (required)
+  
   \fonts subdirectory (not required but useful)
 
 \includes\
+  
   drupalheader_responsive.inc 
+  
   drupalfooter_responsive.inc
+  
   include_menu.html
+  
   include_menu_you_are_logged_in_as.html
+  
   include_notification_preferences.html
+  
   (all these files are required)
 
 \Lending\
+  
   (all these files are required)
 
 
