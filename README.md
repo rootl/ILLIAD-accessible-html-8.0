@@ -29,5 +29,7 @@ If you want to replace your web files completely with the ones in this repositor
   
 You can also copy the form code from within the html files and replace the code in your html files. 
 
+Most of the web files and css files are commented with explanations of code changes and 'where to put things like your logo.'
+
 Please contact me via rootl@geneseo.edu if you have any questions.
 
