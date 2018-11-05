@@ -33,3 +33,6 @@ Most of the web files and css files are commented with explanations of code chan
 
 Please contact me via rootl@geneseo.edu if you have any questions.
 
+This presentation highlights the "why and how" of changes made to our ILLiAD web files:
+https://go.geneseo.edu/ILLiADAccessForAll
+
