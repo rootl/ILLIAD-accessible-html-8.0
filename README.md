@@ -1,11 +1,13 @@
 # ILLIAD-accessible-html-8.0
 WCAG Accessibility compliant and responsive public facing web files for ILLiAD and IDS
 
+These files are intended to replace your existing ILLiAD web files, or serve as a template for you to make your IlliAD web files meet WCAG 2.0 Web Content Accessibility standards.
+
 Remember to back up all your existing web files (ie anything with these extensions: html, shtml, css, inc).
 
 You should be able to rename these files as test or set up a test ILLiAD directory where you can preview look and feel of the pages before you replace them on your live site.
 
-If you want to replace your web files completely with the ones in this repository, you must also add these directories (or add these files to the directories if they already exist):
+If you want to replace your web files completely with the ones in this repository, you must also add these sub directories (or add the files to your respective sub directories if they already exist):
 
     \styles\
       Gist4Web.css (required) 
