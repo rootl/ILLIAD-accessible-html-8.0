@@ -1,7 +1,7 @@
 # ILLIAD-accessible-html-8.0
 WCAG Accessibility compliant and responsive public facing web files for ILLiAD and IDS
 
-Remember to back up all your existing web files .
+Remember to back up all your existing web files (ie anything with these extensions: html, shtml, css, inc).
 
 You should be able to rename these files as test or set up a test ILLiAD directory where you can preview look and feel of the pages before you replace them on your live site.
 
