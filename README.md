@@ -14,7 +14,7 @@ If you want to replace your web files completely with the ones in this repositor
       \fonts\ subdirectory (not required but useful)
     
 
-    \includes\  (all these files are required)
+    \includes\  (all files required; ones listed below are absolutely required)
   
       drupalheader_responsive.inc  
       drupalfooter_responsive.inc 
@@ -23,16 +23,22 @@ If you want to replace your web files completely with the ones in this repositor
       include_notification_preferences.html
   
 
-    \Lending\   (all these files are required)
+    \Lending\   (all files required)
 
-  
   
 You can also copy the form code from within the html files and replace the code in your html files. 
 
 Most of the web files and css files are commented with explanations of code changes and 'where to put things like your logo.'
 
-Please contact me via rootl@geneseo.edu if you have any questions.
+Please look through the \screenshots\ directory and corresponding readme file. These screenshots demonstrate how the Accessible files display on SUNY Geneseo Milne Library instance of ILLiAD. 
+
+Public-visible examples:
+https://illiad.geneseo.edu/
+https://illiad.geneseo.edu/lending/lendinglogon.html
+
 
 This presentation highlights the "why and how" of changes made to our ILLiAD web files:
 https://go.geneseo.edu/ILLiADAccessForAll
 
+
+Please contact me via rootl@geneseo.edu if you have any questions.
