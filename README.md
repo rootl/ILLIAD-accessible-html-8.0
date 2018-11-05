@@ -32,13 +32,9 @@ Most of the web files and css files are commented with explanations of code chan
 
 Please look through the \screenshots\ directory and corresponding readme file. These screenshots demonstrate how the Accessible files display on SUNY Geneseo Milne Library instance of ILLiAD. 
 
-Public-visible examples:
-https://illiad.geneseo.edu/
-https://illiad.geneseo.edu/lending/lendinglogon.html
-
-
 This presentation highlights the "why and how" of changes made to our ILLiAD web files:
-https://go.geneseo.edu/ILLiADAccessForAll
+
+    https://go.geneseo.edu/ILLiADAccessForAll
 
 
 Please contact me via rootl@geneseo.edu if you have any questions.
